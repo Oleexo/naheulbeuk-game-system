@@ -1,0 +1,14 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "launch-chrome",
+          "type": "shell",
+          "command": "chrome.exe --disable-extensions --remote-debugging-port=9222 --new-window --user-data-dir=\"${workspaceFolder}/chrome-dev-data\" --auto-open-devtools-for-tabs http://localhost:30000/",
+          "group": "none",
+          "problemMatcher": []
+      }
+  ]
+}

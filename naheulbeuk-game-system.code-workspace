@@ -1,0 +1,33 @@
+{
+    "folders": [
+        {
+            "name": "Game System",
+            "path": ".",
+        }
+    ],
+    "settings": {
+        "editor.tabSize": 2,
+        "files.encoding": "utf8",
+        // Configure glob patterns for excluding files and folders.
+        "files.exclude": {
+            "**/.git": true,
+        },
+        // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.
+        "search.exclude": {
+            "**/node": true,
+            "**/node_modules": true,
+        },
+        "jest.autoRun": "off",
+        "jest.debugCodeLens.showWhenTestStateIn": [ "fail", "pass", "unknown" ],
+        "typescript.preferences.quoteStyle": "single",
+        "files.eol": "\n",
+        "javascript.format.semicolons": "insert",
+        "javascript.preferences.importModuleSpecifier": "relative",
+        "javascript.preferences.quoteStyle": "single",
+        "javascript.referencesCodeLens.enabled": true,
+        "typescript.format.semicolons": "insert",
+        "typescript.implementationsCodeLens.enabled": true,
+        "typescript.preferences.importModuleSpecifier": "relative",
+        "typescript.suggest.completeFunctionCalls": true,
+    }
+}
