@@ -6,8 +6,8 @@
   "minimumCoreVersion": "0.8.6",
   "compatibleCoreVersion": "9",
   "author": "Oleexo",
-  "esmodules": ["module/naheulbeuk.mjs"],
-  "styles": ["css/naheulbeuk.css"],
+  "esmodules": ["naheulbeuk.es.js"],
+  "styles": ["styles.css"],
   "scripts": [],
   "packs": [],
   "languages": [

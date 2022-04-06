@@ -1,12 +1,14 @@
+import "./scss/naheulbeuk.scss";
+
 // Import document classes.
-import { naheulbeukActor } from "./documents/actor.mjs";
-import { naheulbeukItem } from "./documents/item.mjs";
+import { naheulbeukActor } from "./module/documents/actor.mjs";
+import { naheulbeukItem } from "./module/documents/item.mjs";
 // Import sheet classes.
-import { naheulbeukActorSheet } from "./sheets/actor-sheet.mjs";
-import { naheulbeukItemSheet } from "./sheets/item-sheet.mjs";
+import { naheulbeukActorSheet } from "./module/sheets/actor-sheet.mjs";
+import { naheulbeukItemSheet } from "./module/sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
-import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
-import { NAHEULBEUK } from "./helpers/config.mjs";
+import { preloadHandlebarsTemplates } from "./module/helpers/templates.mjs";
+import { NAHEULBEUK } from "./module/helpers/config.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */

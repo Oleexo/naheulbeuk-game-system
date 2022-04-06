@@ -13,7 +13,10 @@
       ],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}/foundryvtt",
-      "program": "resources/app/main.js"
+      "program": "resources/app/main.js",
+      "args": [
+        "--dataPath=${workspaceFolder}/foundryvtt-data",
+      ]
     }
   ]
 }

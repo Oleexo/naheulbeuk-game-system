@@ -1,6 +1,7 @@
 chrome-dev-data
 debug.log
 foundryvtt
+foundryvtt-data
 
 # dependencies
 /node_modules
