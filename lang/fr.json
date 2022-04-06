@@ -1,0 +1,22 @@
+{
+  "NAHEULBEUK.AbilityStr": "Strength",
+  "NAHEULBEUK.AbilityCon": "Constitution",
+  "NAHEULBEUK.AbilityDex": "Dexterity",
+  "NAHEULBEUK.AbilityInt": "Intelligence",
+  "NAHEULBEUK.AbilityWis": "Wisdom",
+  "NAHEULBEUK.AbilityCha": "Charisma",
+
+  "NAHEULBEUK.AbilityStrAbbr": "str",
+  "NAHEULBEUK.AbilityConAbbr": "con",
+  "NAHEULBEUK.AbilityDexAbbr": "dex",
+  "NAHEULBEUK.AbilityIntAbbr": "int",
+  "NAHEULBEUK.AbilityWisAbbr": "wis",
+  "NAHEULBEUK.AbilityChaAbbr": "cha",
+
+  "NAHEULBEUK.EffectCreate": "Create Effect",
+  "NAHEULBEUK.EffectToggle": "Toggle Effect",
+  "NAHEULBEUK.EffectEdit": "Edit Effect",
+  "NAHEULBEUK.EffectDelete": "Delete Effect",
+
+  "NAHEULBEUK.Add": "Add"
+}

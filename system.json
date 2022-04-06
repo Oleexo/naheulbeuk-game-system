@@ -1,0 +1,33 @@
+{
+  "name": "naheulbeuk",
+  "title": "Naheulbeuk",
+  "description": "The Naheulbeuk system for FoundryVTT!",
+  "version": "1.0.0",
+  "minimumCoreVersion": "0.8.6",
+  "compatibleCoreVersion": "9",
+  "author": "MaximeC",
+  "esmodules": ["module/naheulbeuk.mjs"],
+  "styles": ["css/naheulbeuk.css"],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Francais",
+      "path": "lang/fr.json"
+    }
+  ],
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt"
+}
