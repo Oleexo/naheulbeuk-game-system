@@ -11,8 +11,8 @@ export class naheulbeukActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["naheulbeuk", "sheet", "actor"],
       template: "systems/naheulbeuk/templates/actor/actor-sheet.html",
-      width: 600,
-      height: 600,
+      width: 1200,
+      height: 800,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
     });
   }
@@ -68,6 +68,7 @@ export class naheulbeukActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     // Handle ability scores.
+    console.log(context.data);
     for (let [k, v] of Object.entries(context.data.abilities)) {
       v.label = game.i18n.localize(CONFIG.NAHEULBEUK.abilities[k]) ?? k;
     }

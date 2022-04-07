@@ -24,7 +24,6 @@ export class naheulbeukItemSheet extends ItemSheet {
     // unique item sheet by type, like `weapon-sheet.html`.
     return `${path}/item-${this.item.data.type}-sheet.html`;
   }
-
   /* -------------------------------------------- */
 
   /** @override */

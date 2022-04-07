@@ -7,7 +7,7 @@
   "compatibleCoreVersion": "9",
   "author": "Oleexo",
   "esmodules": ["naheulbeuk.es.js"],
-  "styles": ["styles.css"],
+  "styles": ["style.css"],
   "scripts": [],
   "packs": [],
   "languages": [
@@ -25,7 +25,7 @@
   "gridDistance": 5,
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power",
+  "secondaryTokenAttribute": "astral",
   "url": "https://github.com/Oleexo/naheulbeuk-game-system",
   "manifest": "",
   "download": "",

@@ -3,12 +3,40 @@
     "types": ["character", "npc"],
     "templates": {
       "base": {
+        "attributes": {
+          "name": "",
+          "origin": "",
+          "class": "",
+          "sex": "",
+          "age": 0,
+          "height": 0,
+          "weight": 0,
+          "level": 1,
+          "xp": 0
+        },
+        "abilities": {
+          "courage": {
+            "value": 0
+          },
+          "intelligence": {
+            "value": 0
+          },
+          "charisma": {
+            "value": 0
+          },
+          "dexterity": {
+            "value": 0
+          },
+          "strength": {
+            "value": 0
+          }
+        },
         "health": {
           "value": 10,
           "min": 0,
           "max": 10
         },
-        "power": {
+        "astral": {
           "value": 5,
           "min": 0,
           "max": 5
