@@ -29,5 +29,9 @@
         "typescript.implementationsCodeLens.enabled": true,
         "typescript.preferences.importModuleSpecifier": "relative",
         "typescript.suggest.completeFunctionCalls": true,
+        "files.associations": {
+            "*.hbs": "handlebars",
+            "*.html": "handlebars",
+        }
     }
 }

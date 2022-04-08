@@ -30,5 +30,18 @@
   "NAHEULBEUK.Health": "Energie Vitale",
   "NAHEULBEUK.Astral": "Energie Astrale",
   "NAHEULBEUK.Level": "Niveau",
-  "NAHEULBEUK.Experience": "Expérience"
+  "NAHEULBEUK.Experience": "Expérience",
+
+  "nhb": {
+    "actor": {
+      "sheet": {
+        "pick-sex": "Choisir un sex"
+      },
+      "sex": {
+        "male": "Homme",
+        "female": "Femme",
+        "other": "tardigrade"
+      }
+    }
+  }
 }

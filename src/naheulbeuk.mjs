@@ -10,6 +10,8 @@ import { naheulbeukItemSheet } from "./module/sheets/item-sheet.mjs";
 import { preloadHandlebarsTemplates } from "./module/helpers/templates.mjs";
 import { NAHEULBEUK } from "./module/helpers/config.mjs";
 
+import "./module/helpers/localize-enhanced.mjs";
+
 /* -------------------------------------------- */
 /*  Init Hook                                   */
 /* -------------------------------------------- */
@@ -68,6 +70,7 @@ Handlebars.registerHelper('concat', function() {
 Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
 });
+
 
 /* -------------------------------------------- */
 /*  Ready Hook                                  */
