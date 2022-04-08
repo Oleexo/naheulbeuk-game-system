@@ -39,12 +39,29 @@ export class naheulbeukActor extends Actor {
     this._prepareNpcData(actorData);
   }
 
+  _getTotalOfModifiableValue(value) {
+    let total = 0;
+
+    if (value.value) {
+      total += value.value;
+    }
+    if (value.temp) {
+      total += value.temp;
+    }
+    if (value.mod) {
+      total += value.mod;
+    }
+
+    return total;
+  }
+
   /**
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
     if (actorData.type !== 'character') return;
 
+    console.log(actorData.data);
     // Make modifications to data here. For example:
     const data = actorData.data;
 
@@ -57,9 +74,15 @@ export class naheulbeukActor extends Actor {
         stat.mod = 0;
       }
     }
-    let magicalProtection = (data.stats.courage.value + data.stats.intelligence.value + data.stats.strength.value) / 3
-    data.skills.protection.magical.value = Math.floor(magicalProtection);
 
+    let magicalProtection = (data.stats.courage.value + data.stats.intelligence.value + data.stats.strength.value) / 3
+    data.skills.magic.resist = Math.floor(magicalProtection);
+
+    data.skills.magic.physical.value = (this._getTotalOfModifiableValue(data.stats.intelligence) +
+        this._getTotalOfModifiableValue(data.stats.dexterity)) / 2;
+
+    data.skills.magic.psychic.value = (this._getTotalOfModifiableValue(data.stats.intelligence) +
+        this._getTotalOfModifiableValue(data.stats.charisma)) / 2;
     if (data.stats.dexterity.value <= 8) {
       data.skills.attack.mod = -0.5;
       data.skills.parade.mod = -0.5;

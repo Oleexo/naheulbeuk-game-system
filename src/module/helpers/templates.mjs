@@ -15,5 +15,6 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/naheulbeuk/templates/actor/parts/actor-health.html",
         "systems/naheulbeuk/templates/actor/parts/actor-astral.html",
         "systems/naheulbeuk/templates/actor/parts/actor-exp.html",
+        "systems/naheulbeuk/templates/actor/parts/actor-senses.html",
     ]);
 };

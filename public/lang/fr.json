@@ -17,6 +17,12 @@
   "NAHEULBEUK.EffectDelete": "Delete Effect",
 
   "NAHEULBEUK.Add": "Ajouter",
+  "NAHEULBEUK.Senses.Title": "Sens",
+  "NAHEULBEUK.Senses.Languages": "Langues",
+  "NAHEULBEUK.Senses.Vision": "Vision",
+  "NAHEULBEUK.Senses.Nyctalopia": "Nyctalopie",
+  "NAHEULBEUK.Senses.Hearing": "Ouïe",
+  "NAHEULBEUK.Senses.Smell": "Odorat",
 
   "NAHEULBEUK.Sex": "Sexe",
   "NAHEULBEUK.Origin": "Origine",
@@ -43,5 +49,11 @@
         "other": "tardigrade"
       }
     }
-  }
+  },
+  "NAHEULBEUK.Attack": "Attaque",
+  "NAHEULBEUK.Parade": "Parade",
+  "NAHEULBEUK.Throw": "Jet",
+  "NAHEULBEUK.Dodge": "Esquive",
+  "NAHEULBEUK.MagicPhysical": "Magie Physique",
+  "NAHEULBEUK.MagicPsychic": "Magie Psychique"
 }
