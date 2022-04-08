@@ -1,16 +1,14 @@
 {
-  "NAHEULBEUK.AbilityStr": "Strength",
-  "NAHEULBEUK.AbilityCon": "Constitution",
-  "NAHEULBEUK.AbilityDex": "Dexterity",
-  "NAHEULBEUK.AbilityInt": "Intelligence",
-  "NAHEULBEUK.AbilityWis": "Wisdom",
-  "NAHEULBEUK.AbilityCha": "Charisma",
+  "NAHEULBEUK.StatsStr": "Strength",
+  "NAHEULBEUK.StatsCou": "Constitution",
+  "NAHEULBEUK.StatsDex": "Dexterity",
+  "NAHEULBEUK.StatsInt": "Intelligence",
+  "NAHEULBEUK.StatsCha": "Charisma",
 
   "NAHEULBEUK.AbilityStrAbbr": "str",
-  "NAHEULBEUK.AbilityConAbbr": "con",
+  "NAHEULBEUK.AbilityConAbbr": "cou",
   "NAHEULBEUK.AbilityDexAbbr": "dex",
   "NAHEULBEUK.AbilityIntAbbr": "int",
-  "NAHEULBEUK.AbilityWisAbbr": "wis",
   "NAHEULBEUK.AbilityChaAbbr": "cha",
 
   "NAHEULBEUK.EffectCreate": "Create Effect",
@@ -18,5 +16,18 @@
   "NAHEULBEUK.EffectEdit": "Edit Effect",
   "NAHEULBEUK.EffectDelete": "Delete Effect",
 
-  "NAHEULBEUK.Add": "Add"
+  "NAHEULBEUK.Add": "Add",
+
+  "NAHEULBEUK.Sex": "Sex",
+  "NAHEULBEUK.Origin": "Origin",
+  "NAHEULBEUK.Class": "Class",
+  "NAHEULBEUK.Age": "Age",
+  "NAHEULBEUK.Height": "Height",
+  "NAHEULBEUK.Weight": "Weight",
+  "NAHEULBEUK.Stats": "Stats",
+
+  "NAHEULBEUK.Health": "Health",
+  "NAHEULBEUK.Astral": "Astral",
+  "NAHEULBEUK.Level": "Level",
+  "NAHEULBEUK.Experience": "Experience"
 }

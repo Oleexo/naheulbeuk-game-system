@@ -7,22 +7,21 @@ NAHEULBEUK.foobar = {
 };
 
 /**
- * The set of Ability Scores used within the sytem.
+ * The set of Ability Scores used within the system.
  * @type {Object}
  */
- NAHEULBEUK.abilities = {
-  "str": "NAHEULBEUK.AbilityStr",
-  "dex": "NAHEULBEUK.AbilityDex",
-  "con": "NAHEULBEUK.AbilityCon",
-  "int": "NAHEULBEUK.AbilityInt",
-  "wis": "NAHEULBEUK.AbilityWis",
-  "cha": "NAHEULBEUK.AbilityCha"
+ NAHEULBEUK.stats = {
+  "strength": "NAHEULBEUK.StatsStr",
+  "dexterity": "NAHEULBEUK.StatsDex",
+  "courage": "NAHEULBEUK.StatsCou",
+  "intelligence": "NAHEULBEUK.StatsInt",
+  "charisma": "NAHEULBEUK.StatsCha"
 };
 
 NAHEULBEUK.abilityAbbreviations = {
   "str": "NAHEULBEUK.AbilityStrAbbr",
   "dex": "NAHEULBEUK.AbilityDexAbbr",
-  "con": "NAHEULBEUK.AbilityConAbbr",
+  "cou": "NAHEULBEUK.AbilityCouAbbr",
   "int": "NAHEULBEUK.AbilityIntAbbr",
   "wis": "NAHEULBEUK.AbilityWisAbbr",
   "cha": "NAHEULBEUK.AbilityChaAbbr"

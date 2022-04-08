@@ -14,21 +14,57 @@
           "level": 1,
           "xp": 0
         },
-        "abilities": {
+        "skills": {
+          "attack": {
+            "value": 8,
+            "temp": 0
+          },
+          "parade": {
+            "value": 0,
+            "temp": 0
+          },
+          "throw": {
+            "value": 0,
+            "temp": 0
+          },
+          "dodge": {
+            "value": 0,
+            "temp": 0
+          },
+          "magic": {
+            "physical": {
+              "value": 0,
+              "temp": 0
+            },
+            "psychic": {
+              "value": 0,
+              "temp": 0
+            }
+          },
+          "protection": {
+            "max": 0
+          }
+        },
+        "stats": {
           "courage": {
-            "value": 0
+            "value": 0,
+            "temp": 0
           },
           "intelligence": {
-            "value": 0
+            "value": 0,
+            "temp": 0
           },
           "charisma": {
-            "value": 0
+            "value": 0,
+            "temp": 0
           },
           "dexterity": {
-            "value": 0
+            "value": 0,
+            "temp": 0
           },
           "strength": {
-            "value": 0
+            "value": 0,
+            "temp": 0
           }
         },
         "health": {
@@ -45,32 +81,7 @@
       }
     },
     "character": {
-      "templates": ["base"],
-      "attributes": {
-        "level": {
-          "value": 1
-        }
-      },
-      "abilities": {
-        "str": {
-          "value": 10
-        },
-        "dex": {
-          "value": 10
-        },
-        "con": {
-          "value": 10
-        },
-        "int": {
-          "value": 10
-        },
-        "wis": {
-          "value": 10
-        },
-        "cha": {
-          "value": 10
-        }
-      }
+      "templates": ["base"]
     },
     "npc": {
       "templates": ["base"],

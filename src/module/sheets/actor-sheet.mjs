@@ -69,8 +69,8 @@ export class naheulbeukActorSheet extends ActorSheet {
   _prepareCharacterData(context) {
     // Handle ability scores.
     console.log(context.data);
-    for (let [k, v] of Object.entries(context.data.abilities)) {
-      v.label = game.i18n.localize(CONFIG.NAHEULBEUK.abilities[k]) ?? k;
+    for (let [k, v] of Object.entries(context.data.stats)) {
+      v.label = game.i18n.localize(CONFIG.NAHEULBEUK.stats[k]) ?? k;
     }
   }
 

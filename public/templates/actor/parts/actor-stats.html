@@ -1,0 +1,22 @@
+<div class="abilities flexcol">
+    <h2>{{localize "NAHEULBEUK.Stats"}}</h2>
+    <div class="ability flexrow flex-group-center">
+        <p class="flexlarge align-left"></p>
+        <p>Base</p>
+        <p>Temp</p>
+        <p>Mod</p>
+    </div>
+    {{#each data.stats as |ability key|}}
+    <div class="ability flexrow flex-group-center">
+        <label for="data.stats.{{key}}.value"
+               class="resource-label rollable flexlarge align-left"
+               data-roll="d20+@stats.{{key}}.mod+@stats.{{key}}.temp" data-label="{{ability.label}}">{{ability.label}}</label>
+        <input type="text" name="data.stats.{{key}}.value" value="{{ability.value}}"
+               data-dtype="Number"/>
+        <input type="text" name="data.stats.{{key}}.temp" value="{{ability.temp}}"
+               data-dtype="Number"/>
+        <span class="ability-mod rollable" data-roll="d20+@stats.{{key}}.mod+@stats.{{key}}.temp"
+              data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+    </div>
+    {{/each}}
+</div>
