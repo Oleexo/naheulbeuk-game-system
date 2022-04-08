@@ -7,8 +7,8 @@ Hooks.once("ready", () => {
 
 function localize(key) {
   return tryGetLocalisation(key, game.i18n.translations)
-  || tryGetLocalisation(key, game.i18n._fallback)
-  || key;
+    || tryGetLocalisation(key, game.i18n._fallback)
+    || key;
 }
 
 function tryGetLocalisation(key, translations) {
