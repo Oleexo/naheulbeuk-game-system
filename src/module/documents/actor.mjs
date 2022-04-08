@@ -49,10 +49,41 @@ export class naheulbeukActor extends Actor {
     const data = actorData.data;
 
     // Loop through ability scores, and add their modifiers to our sheet output.
-    for (let [key, ability] of Object.entries(data.abilities)) {
+    for (let [key, stat] of Object.entries(data.stats)) {
       // Calculate the modifier using d20 rules.
-      ability.mod = Math.floor((ability.value - 10) / 2);
+      //ability.mod = Math.floor((ability.value - 10) / 2);
+      if (!stat.temp) {
+        stat.temp = 0;
+        stat.mod = 0;
+      }
     }
+    let magicalProtection = (data.stats.courage.value + data.stats.intelligence.value + data.stats.strength.value) / 3
+    data.skills.protection.magical.value = Math.floor(magicalProtection);
+
+    if (data.stats.dexterity.value <= 8) {
+      data.skills.attack.mod = -0.5;
+      data.skills.parade.mod = -0.5;
+    } else if (data.stats.dexterity.value >= 12) {
+      data.skills.attack.mod = +0.5;
+      data.skills.parade.mod = +0.5;
+    }
+    // magic.physical = Intelligence + Adresse / 2
+    // magic.psychic  = Intelligence + Charisme / 2
+
+    // todo
+    /*
+    Pour chaque point de FORCE supérieur à 12 : +1 point d’impact (dégâts des armes améliorés au corps à corps ou à distance)
+  Le bonus au dégâts sera donc de +1 pour FO 13, et de +4 pour FO 16, etc.
+  Et au contraire sur une carac. de FORCE de 8 ou inférieure : -1 point d’impact (dégâts des armes diminués, car mauviette)
+  Contrairement au bonus, le malus ne se cumule pas car on considère que l'arme, même maniée faiblement, peut blesser.
+     */
+    /*
+    Pour chaque point d'INTELLIGENCE supérieur à 12 : +1 point de dégâts des sorts (selon sortilège)
+Le bonus au dégâts sera donc de +1 pour INT 13, et de +4 pour INT 16, etc.
+Il s'applique à chaque jet de dégât de sortilège : s'il y a plusieurs cibles, il s'appliquera donc à chaque cible
+Il n'y a pas de malus pour intelligence faible, car un score faible ne permet pas l'usage de la magie, quoi qu'il arrive. Et
+puis, le sort est déjà doué d'une vie propre..
+     */
   }
 
   /**
@@ -88,9 +119,9 @@ export class naheulbeukActor extends Actor {
     // Copy the ability scores to the top level, so that rolls can use
     // formulas like `@str.mod + 4`.
     if (data.abilities) {
-      for (let [k, v] of Object.entries(data.abilities)) {
-        data[k] = foundry.utils.deepClone(v);
-      }
+      //for (let [k, v] of Object.entries(data.abilities)) {
+      //  data[k] = foundry.utils.deepClone(v);
+      //}
     }
 
     // Add level for easier access, or fall back to 0.
