@@ -55,6 +55,12 @@ export class naheulbeukActorSheet extends ActorSheet {
 
     // Prepare active effects
     context.effects = prepareActiveEffectCategories(this.actor.effects);
+    
+    context.sexList = [
+      { label: "nhb.actor.sex.male", value: "male" },
+      { label: "nhb.actor.sex.female", value: "female" },
+      { label: "nhb.actor.sex.other", value: "other" },
+    ]
 
     return context;
   }
@@ -128,6 +134,10 @@ export class naheulbeukActorSheet extends ActorSheet {
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
+
+    html.find("#sex-dropdown").on('change', event => {
+      html.find("")
+    });
 
     // Render the item sheet for viewing/editing prior to the editable check.
     html.find('.item-edit').click(ev => {
