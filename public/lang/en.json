@@ -17,6 +17,12 @@
   "NAHEULBEUK.EffectDelete": "Delete Effect",
 
   "NAHEULBEUK.Add": "Add",
+  "NAHEULBEUK.Senses.Title": "Senses",
+  "NAHEULBEUK.Senses.Languages": "Languages",
+  "NAHEULBEUK.Senses.Vision": "Vision",
+  "NAHEULBEUK.Senses.Nyctalopia": "Nyctalopia",
+  "NAHEULBEUK.Senses.Hearing": "Hearing",
+  "NAHEULBEUK.Senses.Smell": "Smell",
 
   "NAHEULBEUK.Sex": "Sex",
   "NAHEULBEUK.Origin": "Origin",
@@ -29,5 +35,12 @@
   "NAHEULBEUK.Health": "Health",
   "NAHEULBEUK.Astral": "Astral",
   "NAHEULBEUK.Level": "Level",
-  "NAHEULBEUK.Experience": "Experience"
+  "NAHEULBEUK.Experience": "Experience",
+
+  "NAHEULBEUK.Attack": "Attack",
+  "NAHEULBEUK.Parade": "Parade",
+  "NAHEULBEUK.Throw": "Throw",
+  "NAHEULBEUK.Dodge": "Dodge",
+  "NAHEULBEUK.MagicPhysical": "Physical Magic",
+  "NAHEULBEUK.MagicPhysical": "Psychic Magic"
 }

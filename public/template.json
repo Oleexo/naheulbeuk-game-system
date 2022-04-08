@@ -12,59 +12,68 @@
           "height": 0,
           "weight": 0,
           "level": 1,
-          "xp": 0
+          "xp": 0,
+          "senses": {
+            "languages": "",
+            "vision": "",
+            "nyctalopia": "",
+            "hearing": "",
+            "smell": ""
+          }
         },
         "skills": {
           "attack": {
             "value": 8,
-            "temp": 0
+            "temp": 0,
+            "mod": 0
           },
           "parade": {
             "value": 0,
-            "temp": 0
+            "temp": 0,
+            "mod": 0
           },
           "throw": {
             "value": 0,
-            "temp": 0
+            "temp": 0,
+            "mod": 0
           },
           "dodge": {
             "value": 0,
-            "temp": 0
+            "temp": 0,
+            "mod": 0
           },
           "magic": {
             "physical": {
               "value": 0,
-              "temp": 0
+              "temp": 0,
+              "mod": 0
             },
             "psychic": {
               "value": 0,
-              "temp": 0
-            }
+              "temp": 0,
+              "mod": 0
+            },
+            "resist": 0
           },
           "protection": {
-            "max": 0
+            "pr-nat-max": 0
           }
         },
         "stats": {
           "courage": {
-            "value": 0,
-            "temp": 0
+            "value": 0
           },
           "intelligence": {
-            "value": 0,
-            "temp": 0
+            "value": 0
           },
           "charisma": {
-            "value": 0,
-            "temp": 0
+            "value": 0
           },
           "dexterity": {
-            "value": 0,
-            "temp": 0
+            "value": 0
           },
           "strength": {
-            "value": 0,
-            "temp": 0
+            "value": 0
           }
         },
         "health": {

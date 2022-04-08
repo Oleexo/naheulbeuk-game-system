@@ -84,7 +84,7 @@
         {{!-- Owned Features Tab --}}
         <div class="tab features" data-group="primary" data-tab="features">
             <section class="grid grid-7col">
-                <aside class="sidebar grid-span-3">
+                <aside class="sidebar grid-span-4">
                     {{> "systems/naheulbeuk/templates/actor/parts/actor-stats.html"}}
                     {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
                     use both the "grid" and "grid-Ncol" class where "N" can be any number
@@ -98,10 +98,9 @@
                 </section>
 
                 {{!-- For the main features list, span the right two columns --}}
-                <section class="main grid-span-3">
-                    {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and
-                    defined in module/helpers/templates.mjs --}}
-                    {{> "systems/naheulbeuk/templates/actor/parts/actor-features.html"}}
+                <section class="main grid-span-2">
+                    {{> "systems/naheulbeuk/templates/actor/parts/actor-senses.html"}}
+
                 </section>
 
             </section>
