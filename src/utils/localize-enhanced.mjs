@@ -1,8 +1,8 @@
-import log from './log';
+import logger from './logger';
 
 Hooks.once("ready", () => {
   game.i18n.localize = localize;
-  log.log("Overriding game.i18n.localize()");
+  logger.log("Overriding game.i18n.localize()");
 });
 
 function localize(key) {
