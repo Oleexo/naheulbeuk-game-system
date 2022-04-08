@@ -39,6 +39,7 @@
   "NAHEULBEUK.Experience": "Expérience",
 
   "nhb": {
+    "sex": "Sexe",
     "actor": {
       "sheet": {
         "pick-sex": "Choisir un sex"
@@ -46,7 +47,7 @@
       "sex": {
         "male": "Homme",
         "female": "Femme",
-        "other": "tardigrade"
+        "other": "Tardigrade"
       }
     }
   },

@@ -6,7 +6,7 @@
       {
           "label": "launch-chrome",
           "type": "shell",
-          "command": "chrome.exe --disable-extensions --remote-debugging-port=9222 --new-window --user-data-dir=\"${workspaceFolder}/chrome-dev-data\" --auto-open-devtools-for-tabs http://localhost:30000/",
+          "command": "chrome.exe --disable-extensions --remote-debugging-port=9222 --new-window --user-data-dir=\"${workspaceFolder}/chrome-dev-data\" --auto-open-devtools-for-tabs http://localhost:30001/",
           "group": "none",
           "problemMatcher": []
       }
