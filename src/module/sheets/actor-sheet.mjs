@@ -113,6 +113,7 @@ export class naheulbeukActorSheet extends ActorSheet {
       9: []
     };
 
+    let tbr = [];
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
@@ -129,7 +130,24 @@ export class naheulbeukActorSheet extends ActorSheet {
         if (i.data.spellLevel != undefined) {
           spells[i.data.spellLevel].push(i);
         }
+      } else if (i.type === 'armor') {
+        if (context.data.stuff.armor[i.data.position]) {
+          if (context.data.stuff.armor[i.data.position]._id === i._id) {
+            context.data.stuff.armor[i.data.position] = i;
+          } else {
+            tbr.push(i);
+          }
+        } else {
+          context.data.stuff.armor[i.data.position] = i;
+        }
+      } else if (i.type === 'melee-weapon' || i.type === 'range-weapon') {
+        context.data.stuff.weapons.push(i);
       }
+    }
+
+    for (let i of tbr) {
+      let item = this.actor.items.get(i._id);
+      item.delete();
     }
 
     // Assign and return
@@ -174,7 +192,9 @@ export class naheulbeukActorSheet extends ActorSheet {
 
     // Drag events for macros.
     if (this.actor.owner) {
-      let handler = ev => this._onDragStart(ev);
+      let handler = ev => {
+        this._onDragStart(ev);
+      }
       html.find('li.item').each((i, li) => {
         if (li.classList.contains("inventory-header")) return;
         li.setAttribute("draggable", true);
@@ -203,6 +223,10 @@ export class naheulbeukActorSheet extends ActorSheet {
       type: type,
       data: data
     };
+    if (type === 'armor') {
+      itemData.position = header.dataset.position;
+    }
+
     // Remove the type from the dataset since it's in the itemData.type prop.
     delete itemData.data["type"];
 

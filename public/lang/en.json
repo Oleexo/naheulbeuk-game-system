@@ -44,5 +44,21 @@
   "NAHEULBEUK.MagicPhysical": "Physical Magic",
   "NAHEULBEUK.MagicPsychic": "Psychic Magic",
   "NAHEULBEUK.Protections.Natural": "Natural Protection",
-  "NAHEULBEUK.Protections.Magical": "Magical Protection"
+  "NAHEULBEUK.Protections.Magical": "Magical Protection",
+
+  "NAHEULBEUK.Armor.Title": "Armor",
+  "NAHEULBEUK.Armor.Head": "Head",
+  "NAHEULBEUK.Armor.Arms": "Arms",
+  "NAHEULBEUK.Armor.Chest": "Chest",
+  "NAHEULBEUK.Armor.Shield": "Shield",
+  "NAHEULBEUK.Armor.Hands": "Hands",
+  "NAHEULBEUK.Armor.Legs": "Legs",
+  "NAHEULBEUK.Armor.Boots": "Boots",
+
+  "NAHEULBEUK.DamageType": "Damage type",
+  "NAHEULBEUK.DamageTypes.Sharp": "Sharp",
+  "NAHEULBEUK.DamageTypes.Blunt": "Blunt",
+  "NAHEULBEUK.DamageTypes.Projectile": "Projectile",
+  "NAHEULBEUK.DamageTypes.BareHand": "Bare Hand",
+  "NAHEULBEUK.Damage": "Damage"
 }

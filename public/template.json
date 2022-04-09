@@ -155,7 +155,8 @@
         "natural": 0,
         "magical": 0,
         "type": 0
-      }
+      },
+      "position": "head"
     },
     "melee-weapon": {
       "templates": [

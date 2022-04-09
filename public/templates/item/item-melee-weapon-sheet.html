@@ -8,16 +8,6 @@
           <label class="resource-label">Rupture</label>
           <input type="text" name="data.quantity" value="{{data.break}}" data-dtype="Number"/>
         </div>
-        <div class="resource">
-          <label class="resource-label">PR</label>
-          <input type="text" name="data.weight" value="{{data.protections.type}}" data-dtype="Number"/>
-        </div>
-        <div class="resource">
-          <label class="resource-label">Position</label>
-          <select id="data.position" name="data.position">
-            {{selectOptions armorPositions selected=data.position localize=true nameAttr="value" labelAttr="label"}}
-          </select>
-        </div>
       </div>
     </div>
   </header>
@@ -37,7 +27,7 @@
       <div class="ability flexrow flex-group-center">
         <label for="data.stats.{{key}}"
                class="resource-label flexlarge align-left"
-               data-label="{{ability.label}}">{{localize ("key")}}</label>
+               data-label="{{ability.label}}">{{localize "NAHEULBEUK.Stats" key }}</label>
         <input type="text" name="data.stats.{{key}}" value="{{ability}}"
                data-dtype="Number"/>
       </div>
@@ -58,17 +48,18 @@
       </div>
 
       <div class="ability flexrow flex-group-center">
-        <label for="data.protections.natural"
-               class="resource-label flexlarge align-left">{{localize "NAHEULBEUK.Protections.Natural"}}</label>
-        <input type="text" name="data.protections.natural" value="{{data.protections.natural}}"
+        <label for="data.damage"
+               class="resource-label flexlarge align-left">{{localize "NAHEULBEUK.Damage"}}</label>
+        <input type="text" name="data.damage" value="{{data.damage}}"
                data-dtype="Number"/>
       </div>
 
       <div class="ability flexrow flex-group-center">
-        <label for="data.protections.magical"
-               class="resource-label flexlarge align-left">{{localize "NAHEULBEUK.Protections.Magical"}}</label>
-        <input type="text" name="data.protections.magical" value="{{data.protections.magical}}"
-               data-dtype="Number"/>
+        <label for="data.damage-type"
+               class="resource-label flexlarge align-left">{{localize "NAHEULBEUK.DamageType"}}</label>
+        <select id="data.damage-type" name="data.damage-type">
+          {{selectOptions damageTypes selected=data.damage-type localize=true nameAttr="value" labelAttr="label"}}
+        </select>
       </div>
     </div>
 
