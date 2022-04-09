@@ -4,68 +4,83 @@
  */
 export class naheulbeukItemSheet extends ItemSheet {
 
-  /** @override */
-  static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
-      classes: ["naheulbeuk", "sheet", "item"],
-      width: 520,
-      height: 480,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }]
-    });
-  }
-
-  /** @override */
-  get template() {
-    const path = "systems/naheulbeuk/templates/item";
-    // Return a single sheet for all item types.
-    // return `${path}/item-sheet.html`;
-
-    // Alternatively, you could use the following return statement to do a
-    // unique item sheet by type, like `weapon-sheet.html`.
-    return `${path}/item-${this.item.data.type}-sheet.html`;
-  }
-  /* -------------------------------------------- */
-
-  /** @override */
-  getData() {
-    // Retrieve base data structure.
-    const context = super.getData();
-
-    // Use a safe clone of the item data for further operations.
-    const itemData = context.item.data;
-
-    if (itemData.type == 'armor') {
-      this._prepareDataArmor(context);
+    /** @override */
+    static get defaultOptions() {
+        return mergeObject(super.defaultOptions, {
+            classes: ["naheulbeuk", "sheet", "item"],
+            width: 520,
+            height: 480,
+            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes"}]
+        });
     }
 
-    // Retrieve the roll data for TinyMCE editors.
-    context.rollData = {};
-    let actor = this.object?.parent ?? null;
-    if (actor) {
-      context.rollData = actor.getRollData();
+    /** @override */
+    get template() {
+        const path = "systems/naheulbeuk/templates/item";
+        // Return a single sheet for all item types.
+        // return `${path}/item-sheet.html`;
+
+        // Alternatively, you could use the following return statement to do a
+        // unique item sheet by type, like `weapon-sheet.html`.
+        return `${path}/item-${this.item.data.type}-sheet.html`;
     }
 
-    // Add the actor's data to context.data for easier access, as well as flags.
-    context.data = itemData.data;
-    context.flags = itemData.flags;
+    /* -------------------------------------------- */
 
-    return context;
-  }
+    /** @override */
+    getData() {
+        // Retrieve base data structure.
+        const context = super.getData();
 
-  _prepareDataArmor(context) {
-    console.log(context);
-    let data = context.data;
-  }
+        // Use a safe clone of the item data for further operations.
+        const itemData = context.item.data;
 
-  /* -------------------------------------------- */
+        if (itemData.type == 'armor') {
+            this._prepareDataArmor(context);
+        }
 
-  /** @override */
-  activateListeners(html) {
-    super.activateListeners(html);
+        // Retrieve the roll data for TinyMCE editors.
+        context.rollData = {};
+        let actor = this.object?.parent ?? null;
+        if (actor) {
+            context.rollData = actor.getRollData();
+        }
 
-    // Everything below here is only needed if the sheet is editable
-    if (!this.isEditable) return;
+        // Add the actor's data to context.data for easier access, as well as flags.
+        context.data = itemData.data;
+        context.flags = itemData.flags;
+        context.armorPositions = [
+            {label: "NAHEULBEUK.Armor.Head", value: "head"},
+            {label: "NAHEULBEUK.Armor.Arms", value: "arms"},
+            {label: "NAHEULBEUK.Armor.Chest", value: "chest"},
+            {label: "NAHEULBEUK.Armor.Shield", value: "shield"},
+            {label: "NAHEULBEUK.Armor.Hands", value: "hands"},
+            {label: "NAHEULBEUK.Armor.Legs", value: "legs"},
+            {label: "NAHEULBEUK.Armor.Boots", value: "boots"},
+        ];
+        context.damageTypes = [
+            {label: "NAHEULBEUK.DamageTypes.Sharp", value: "sharp"},
+            {label: "NAHEULBEUK.DamageTypes.Blunt", value: "blunt"},
+            {label: "NAHEULBEUK.DamageTypes.Projectile", value: "projectile"},
+            {label: "NAHEULBEUK.DamageTypes.BareHand", value: "bare-hand"},
+        ];
+        return context;
+    }
 
-    // Roll handlers, click handlers, etc. would go here.
-  }
+    _prepareDataArmor(context) {
+        console.log(context);
+        let data = context.data;
+    }
+
+    /* -------------------------------------------- */
+
+    /** @override */
+    activateListeners(html) {
+        super.activateListeners(html);
+
+        // Everything below here is only needed if the sheet is editable
+        if (!this.isEditable) return;
+
+        // Roll handlers, click handlers, etc. would go here.
+    }
 }
