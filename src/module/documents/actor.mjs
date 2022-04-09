@@ -39,20 +39,45 @@ export class naheulbeukActor extends Actor {
     this._prepareNpcData(actorData);
   }
 
-  _getTotalOfModifiableValue(value) {
+  _computeTotalValue(element) {
     let total = 0;
 
-    if (value.value) {
-      total += value.value;
-    }
-    if (value.temp) {
-      total += value.temp;
-    }
-    if (value.mod) {
-      total += value.mod;
+    if (element.value) {
+      total += element.value;
+    } else {
+      element.value = 0;
     }
 
-    return total;
+    if (element.temp) {
+      total += element.temp;
+    } else {
+      element.temp = 0;
+    }
+    if (element.mod) {
+      total += element.mod;
+    } else {
+      element.mod = 0;
+    }
+    element.total = Math.floor(total);
+  }
+
+  _actorComputeStatsTotalValues(data) {
+    // Loop through ability scores, and add their modifiers to our sheet output.
+    for (let [key, element] of Object.entries(data.stats)) {
+      // Calculate the modifier using d20 rules.
+      //ability.mod = Math.floor((ability.value - 10) / 2);
+      this._computeTotalValue(element);
+    }
+
+  }
+  _actorComputeSkillsTotalValues(data) {
+    this._computeTotalValue(data.skills.attack);
+    this._computeTotalValue(data.skills.parade);
+    this._computeTotalValue(data.skills.throw);
+    this._computeTotalValue(data.skills.dodge);
+    this._computeTotalValue(data.skills.magic.physical);
+    this._computeTotalValue(data.skills.magic.psychic);
+    this._computeTotalValue(data.skills.magic.resist);
   }
 
   /**
@@ -65,24 +90,14 @@ export class naheulbeukActor extends Actor {
     // Make modifications to data here. For example:
     const data = actorData.data;
 
-    // Loop through ability scores, and add their modifiers to our sheet output.
-    for (let [key, stat] of Object.entries(data.stats)) {
-      // Calculate the modifier using d20 rules.
-      //ability.mod = Math.floor((ability.value - 10) / 2);
-      if (!stat.temp) {
-        stat.temp = 0;
-        stat.mod = 0;
-      }
-    }
+    this._actorComputeStatsTotalValues(data);
 
-    let magicalProtection = (data.stats.courage.value + data.stats.intelligence.value + data.stats.strength.value) / 3
-    data.skills.magic.resist = Math.floor(magicalProtection);
+    let magicalProtection = (data.stats.courage.total + data.stats.intelligence.total + data.stats.strength.total) / 3
+    data.skills.magic.resist.value = Math.floor(magicalProtection);
 
-    data.skills.magic.physical.value = (this._getTotalOfModifiableValue(data.stats.intelligence) +
-        this._getTotalOfModifiableValue(data.stats.dexterity)) / 2;
+    data.skills.magic.physical.value = (data.stats.intelligence.total + data.stats.dexterity.total) / 2;
+    data.skills.magic.psychic.value = (data.stats.intelligence.total + data.stats.charisma.total) / 2;
 
-    data.skills.magic.psychic.value = (this._getTotalOfModifiableValue(data.stats.intelligence) +
-        this._getTotalOfModifiableValue(data.stats.charisma)) / 2;
     if (data.stats.dexterity.value <= 8) {
       data.skills.attack.mod = -0.5;
       data.skills.parade.mod = -0.5;
@@ -90,9 +105,7 @@ export class naheulbeukActor extends Actor {
       data.skills.attack.mod = +0.5;
       data.skills.parade.mod = +0.5;
     }
-    // magic.physical = Intelligence + Adresse / 2
-    // magic.psychic  = Intelligence + Charisme / 2
-
+    data.skills.throw.value = data.stats.dexterity.total;
     // todo
     /*
     Pour chaque point de FORCE supérieur à 12 : +1 point d’impact (dégâts des armes améliorés au corps à corps ou à distance)
@@ -107,6 +120,8 @@ Il s'applique à chaque jet de dégât de sortilège : s'il y a plusieurs cibles
 Il n'y a pas de malus pour intelligence faible, car un score faible ne permet pas l'usage de la magie, quoi qu'il arrive. Et
 puis, le sort est déjà doué d'une vie propre..
      */
+
+    this._actorComputeSkillsTotalValues(data);
   }
 
   /**

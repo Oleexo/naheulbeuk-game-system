@@ -10,7 +10,7 @@ export class naheulbeukItemSheet extends ItemSheet {
       classes: ["naheulbeuk", "sheet", "item"],
       width: 520,
       height: 480,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }]
     });
   }
 
@@ -34,6 +34,10 @@ export class naheulbeukItemSheet extends ItemSheet {
     // Use a safe clone of the item data for further operations.
     const itemData = context.item.data;
 
+    if (itemData.type == 'armor') {
+      this._prepareDataArmor(context);
+    }
+
     // Retrieve the roll data for TinyMCE editors.
     context.rollData = {};
     let actor = this.object?.parent ?? null;
@@ -46,6 +50,11 @@ export class naheulbeukItemSheet extends ItemSheet {
     context.flags = itemData.flags;
 
     return context;
+  }
+
+  _prepareDataArmor(context) {
+    console.log(context);
+    let data = context.data;
   }
 
   /* -------------------------------------------- */

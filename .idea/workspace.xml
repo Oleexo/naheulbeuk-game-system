@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dccff3f5-75e8-424a-bbb9-78b2fa740ab2" name="Changes" comment="template">
-      <change afterPath="$PROJECT_DIR$/public/templates/actor/parts/actor-senses.html" afterDir="false" />
+    <list default="true" id="dccff3f5-75e8-424a-bbb9-78b2fa740ab2" name="Changes" comment="base stats">
+      <change afterPath="$PROJECT_DIR$/public/templates/item/item-armor-sheet.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/lang/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/lang/fr.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/lang/fr.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/template.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/template.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/actor/actor-character-sheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/actor/actor-character-sheet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/templates/actor/parts/actor-items.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/actor/parts/actor-items.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/templates/actor/parts/actor-stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/actor/parts/actor-stats.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/module/documents/actor.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/documents/actor.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/helpers/templates.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/helpers/templates.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/sheets/actor-sheet.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/sheets/actor-sheet.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/sheets/item-sheet.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/sheets/item-sheet.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,8 @@
       <workItem from="1649171576705" duration="427000" />
       <workItem from="1649266610271" duration="742000" />
       <workItem from="1649345305365" duration="10545000" />
-      <workItem from="1649435572871" duration="8783000" />
+      <workItem from="1649435572871" duration="8924000" />
+      <workItem from="1649495084210" duration="5736000" />
     </task>
     <task id="LOCAL-00001" summary="init template">
       <created>1649266927471</created>
@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649449248341</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="base stats">
+      <created>1649452708496</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649452708496</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +141,7 @@
     <MESSAGE value="init template" />
     <MESSAGE value="Base game system" />
     <MESSAGE value="template" />
-    <option name="LAST_COMMIT_MESSAGE" value="template" />
+    <MESSAGE value="base stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="base stats" />
   </component>
 </project>

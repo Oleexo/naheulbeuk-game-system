@@ -56,5 +56,7 @@
   "NAHEULBEUK.Throw": "Jet",
   "NAHEULBEUK.Dodge": "Esquive",
   "NAHEULBEUK.MagicPhysical": "Magie Physique",
-  "NAHEULBEUK.MagicPsychic": "Magie Psychique"
+  "NAHEULBEUK.MagicPsychic": "Magie Psychique",
+  "NAHEULBEUK.Protections.Natural": "Protection Naturelle",
+  "NAHEULBEUK.Protections.Magical": "Protection Magique"
 }

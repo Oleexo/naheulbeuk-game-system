@@ -42,5 +42,7 @@
   "NAHEULBEUK.Throw": "Throw",
   "NAHEULBEUK.Dodge": "Dodge",
   "NAHEULBEUK.MagicPhysical": "Physical Magic",
-  "NAHEULBEUK.MagicPhysical": "Psychic Magic"
+  "NAHEULBEUK.MagicPsychic": "Psychic Magic",
+  "NAHEULBEUK.Protections.Natural": "Natural Protection",
+  "NAHEULBEUK.Protections.Magical": "Magical Protection"
 }

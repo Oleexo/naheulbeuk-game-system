@@ -2,6 +2,7 @@
     <h2>{{localize "NAHEULBEUK.Stats"}}</h2>
     <div class="ability flexrow flex-group-center">
         <p class="flexlarge align-left"></p>
+        <p>Total</p>
         <p>Base</p>
         <p>Temp</p>
         <p>Mod</p>
@@ -12,6 +13,7 @@
                class="resource-label rollable flexlarge align-left"
                data-roll="d20+@stats.{{key}}.mod+@stats.{{key}}.temp"
                data-label="{{ability.label}}">{{ability.label}}</label>
+        <p>{{ability.total}}</p>
         <input type="text" name="data.stats.{{key}}.value" value="{{ability.value}}"
                data-dtype="Number"/>
         <input type="text" name="data.stats.{{key}}.temp" value="{{ability.temp}}"
@@ -27,6 +29,7 @@
                    class="resource-label rollable flexlarge align-left"
                    data-roll="d20+@skills.attack.value+@skills.attack.mod+@skills.attack.temp" data-label="attack">{{localize
                 "NAHEULBEUK.Attack"}}</label>
+            <p>{{data.skills.attack.total}}</p>
             <input type="text" name="data.skills.attack.value" value="{{data.skills.attack.value}}"
                    data-dtype="Number"/>
             <input type="text" name="data.skills.attack.temp" value="{{data.skills.attack.temp}}"
@@ -38,6 +41,7 @@
                    class="resource-label rollable flexlarge align-left"
                    data-roll="d20+@skills.parade.value+@skills.parade.mod+@skills.parade.temp" data-label="parade">{{localize
                 "NAHEULBEUK.Parade"}}</label>
+            <p>{{data.skills.parade.total}}</p>
             <input type="text" name="data.skills.parade.value" value="{{data.skills.parade.value}}"
                    data-dtype="Number"/>
             <input type="text" name="data.skills.parade.temp" value="{{data.skills.parade.temp}}"
@@ -49,8 +53,9 @@
                    class="resource-label rollable flexlarge align-left"
                    data-roll="d20+@skills.throw.value+@skills.throw.mod+@skills.throw.temp" data-label="throw">{{localize
                 "NAHEULBEUK.Throw"}}</label>
+            <p>{{data.skills.throw.total}}</p>
             <input type="text" name="data.skills.throw.value" value="{{data.skills.throw.value}}"
-                   data-dtype="Number"/>
+                   data-dtype="Number" disabled/>
             <input type="text" name="data.skills.throw.temp" value="{{data.skills.throw.temp}}"
                    data-dtype="Number"/>
             <span class="ability-mod rollable" data-label="throw">{{numberFormat data.skills.throw.mod decimals=0 sign=true}}</span>
@@ -60,8 +65,9 @@
                    class="resource-label rollable flexlarge align-left"
                    data-roll="d20+@skills.dodge.value+@skills.dodge.mod+@skills.dodge.temp" data-label="dodge">{{localize
                 "NAHEULBEUK.Dodge"}}</label>
+            <p>{{data.skills.dodge.total}}</p>
             <input type="text" name="data.skills.dodge.value" value="{{data.skills.dodge.value}}"
-                   data-dtype="Number"/>
+                   data-dtype="Number" disabled/>
             <input type="text" name="data.skills.dodge.temp" value="{{data.skills.dodge.temp}}"
                    data-dtype="Number"/>
             <span class="ability-mod rollable" data-label="dodge">{{numberFormat data.skills.dodge.mod decimals=0 sign=true}}</span>
@@ -71,6 +77,7 @@
                    class="resource-label rollable flexlarge align-left"
                    data-roll="d20+@skills.dodge.value+@skills.dodge.mod+@skills.dodge.temp" data-label="magic.physical">{{localize
                 "NAHEULBEUK.MagicPhysical"}}</label>
+            <p>{{data.skills.magic.physical.total}}</p>
             <input type="text" name="data.skills.magic.physical.value" value="{{data.skills.magic.physical.value}}"
                    data-dtype="Number" disabled/>
             <input type="text" name="data.skills.magic.physical.temp" value="{{data.skills.magic.physical.temp}}"
@@ -82,6 +89,7 @@
                    class="resource-label rollable flexlarge align-left"
                    data-roll="d20+@skills.dodge.value+@skills.dodge.mod+@skills.dodge.temp" data-label="magic.psychic">{{localize
                 "NAHEULBEUK.MagicPhysical"}}</label>
+            <p>{{data.skills.magic.psychic.total}}</p>
             <input type="text" name="data.skills.magic.psychic.value" value="{{data.skills.magic.psychic.value}}"
                    data-dtype="Number" disabled/>
             <input type="text" name="data.skills.magic.psychic.temp" value="{{data.skills.magic.psychic.temp}}"

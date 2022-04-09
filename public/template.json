@@ -1,6 +1,9 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": [
+      "character",
+      "npc"
+    ],
     "templates": {
       "base": {
         "attributes": {
@@ -20,6 +23,9 @@
             "hearing": "",
             "smell": ""
           }
+        },
+        "protections": {
+          "pr-nat-max": 0
         },
         "skills": {
           "attack": {
@@ -53,10 +59,11 @@
               "temp": 0,
               "mod": 0
             },
-            "resist": 0
-          },
-          "protection": {
-            "pr-nat-max": 0
+            "resist": {
+              "value": 0,
+              "temp": 0,
+              "mod": 0
+            }
           }
         },
         "stats": {
@@ -90,31 +97,107 @@
       }
     },
     "character": {
-      "templates": ["base"]
+      "templates": [
+        "base"
+      ],
+      "stuff": {
+        "armor": {
+          "head": null,
+          "arms": null,
+          "chest": null,
+          "shield": null,
+          "hands": null,
+          "legs": null,
+          "boots": null
+        },
+        "weapons": [],
+        "trinkets": []
+      }
     },
     "npc": {
-      "templates": ["base"],
+      "templates": [
+        "base"
+      ],
       "cr": 0
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": [
+      "melee-weapon",
+      "range-weapon",
+      "armor",
+      "item",
+      "feature",
+      "spell"
+    ],
     "templates": {
       "base": {
         "description": ""
       }
     },
+    "armor": {
+      "templates": [
+        "base"
+      ],
+      "stats": {
+        "courage": 0,
+        "intelligence": 0,
+        "charisma": 0,
+        "dexterity": 0,
+        "strength": 0
+      },
+      "skills": {
+        "attack": 0,
+        "parade": 0
+      },
+      "break": 1,
+      "protections": {
+        "natural": 0,
+        "magical": 0,
+        "type": 0
+      }
+    },
+    "melee-weapon": {
+      "templates": [
+        "base"
+      ],
+      "skills": {
+        "attack": 0,
+        "parade": 0
+      },
+      "break": 1,
+      "damage": "d6",
+      "damage-type": "sharp",
+      "stats": {
+        "courage": 0,
+        "intelligence": 0,
+        "charisma": 0,
+        "dexterity": 0,
+        "strength": 0
+      }
+    },
+    "range-weapon": {
+      "templates": [
+        "base"
+      ]
+    },
     "item": {
-      "templates": ["base"],
+      "templates": [
+        "base"
+      ],
       "quantity": 1,
       "weight": 0,
       "formula": "d20 + @str.mod + ceil(@lvl / 2)"
     },
     "feature": {
-      "templates": ["base"]
+      "templates": [
+        "base"
+      ]
     },
     "spell": {
-      "templates": ["base"],
+      "templates": [
+        "base"
+      ],
       "spellLevel": 1
     }
   }
