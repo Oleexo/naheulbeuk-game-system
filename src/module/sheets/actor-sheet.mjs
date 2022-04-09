@@ -1,3 +1,4 @@
+import { getAvailableOrigins } from '../../core/data/origin';
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 
 /**
@@ -56,14 +57,22 @@ export class naheulbeukActorSheet extends ActorSheet {
     // Prepare active effects
     context.effects = prepareActiveEffectCategories(this.actor.effects);
     
-    context.sexList = [
+    context.sexList = this.getSexs();
+    context.origins = [
+      { label: "nhb.actor.sheet.pick-origin", name: "" },
+      ...getAvailableOrigins(actorData.data.stats)
+    ];
+
+    return context;
+  }
+
+  getSexs() {
+    return [
       { label: "nhb.actor.sheet.pick-sex", value: "" },
       { label: "nhb.actor.sex.male", value: "male" },
       { label: "nhb.actor.sex.female", value: "female"},
       { label: "nhb.actor.sex.other", value: "other" },
-    ]
-
-    return context;
+    ];
   }
 
   /**

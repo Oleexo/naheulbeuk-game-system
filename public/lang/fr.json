@@ -39,15 +39,32 @@
   "NAHEULBEUK.Experience": "Expérience",
 
   "nhb": {
-    "sex": "Sexe",
     "actor": {
       "sheet": {
-        "pick-sex": "Choisir un sexe"
+      "sex": "Sexe",
+      "origin": "Origine",
+      "pick-sex": "Choisir un sexe",
+      "pick-origin": "Choisir une origine"
       },
       "sex": {
         "male": "Homme",
         "female": "Femme",
         "other": "Tardigrade"
+      },
+      "origin": {
+        "human": "Humain",
+        "barbarian": "Barbare",
+        "dwarf": "Nain",
+        "hight-elf": "Haut elf",
+        "wood-elf": "Elfe Sylvain",
+        "dark-elf": "Elfe Noir",
+        "half-elf": "Demi-Elfe",
+        "orc": "Orc",
+        "half-orc": "Demi-Orc",
+        "goblin": "Gobelin",
+        "ogre": "Ogre",
+        "halfling": "Hobbit",
+        "gnome": "Gnome"
       }
     }
   },

@@ -18,7 +18,6 @@ function localize(key, keyAddon = null, options = null) {
 
 function tryFormat(key, options) {
   if (options != null && typeof options === 'object') {
-    logger.log(`Trying to format ${key} with`, options, options.hash);
     return game.i18n.format(key, options.hash);
   }
   return null;
