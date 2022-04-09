@@ -42,7 +42,7 @@
     "sex": "Sexe",
     "actor": {
       "sheet": {
-        "pick-sex": "Choisir un sex"
+        "pick-sex": "Choisir un sexe"
       },
       "sex": {
         "male": "Homme",
