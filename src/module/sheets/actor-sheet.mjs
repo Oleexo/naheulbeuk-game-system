@@ -1,4 +1,6 @@
+import { getAvailableJobs } from '../../core/data/job';
 import { getAvailableOrigins } from '../../core/data/origin';
+import logger from '../../utils/logger';
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 
 /**
@@ -62,7 +64,10 @@ export class naheulbeukActorSheet extends ActorSheet {
       { label: "nhb.actor.sheet.pick-origin", name: "" },
       ...getAvailableOrigins(actorData.data.stats)
     ];
-
+    context.jobs = [
+      { label: "nhb.actor.sheet.pick-job", name: "" },
+      ...getAvailableJobs(actorData.data.stats, actorData.data.attributes.origin)
+    ];
     return context;
   }
 

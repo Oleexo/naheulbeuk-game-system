@@ -44,7 +44,8 @@
       "sex": "Sexe",
       "origin": "Origine",
       "pick-sex": "Choisir un sexe",
-      "pick-origin": "Choisir une origine"
+      "pick-origin": "Choisir une origine",
+      "pick-job": "Choisir un métier"
       },
       "sex": {
         "male": "Homme",
@@ -65,6 +66,17 @@
         "ogre": "Ogre",
         "halfling": "Hobbit",
         "gnome": "Gnome"
+      },
+      "job": {	
+        "warrior": "Guerrier",
+        "assassin": "Assassin",
+        "thief": "Voleur",
+        "ranger": "Rôdeur",
+        "bard": "Ménestrel",
+        "merchant": "Marchand",
+        "engineer": "Ingénieur",
+        "pirate": "Pirate",
+        "noble": "Noble"
       }
     }
   },

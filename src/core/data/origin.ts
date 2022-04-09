@@ -1,4 +1,4 @@
-import { Stats } from './stats';
+import { StatRestrictions, Stats } from './stats';
 
 export const origins: Origin[] = [{
     name: 'human',
@@ -137,19 +137,6 @@ export interface Origin {
   name: string,
   label: string,
   restrictions: StatRestrictions,
-}
-
-export interface StatRestrictions {
-  courage: Range,
-  intelligence: Range,
-  charisma: Range,
-  dexterity: Range,
-  strength: Range,
-}
-
-export interface Range {
-  min: number,
-  max: number,
 }
 
 export function getAvailableOrigins(stats: Stats): Origin[] {
