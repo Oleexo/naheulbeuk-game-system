@@ -2,6 +2,7 @@ import { getAvailableJobs } from '../../core/data/job';
 import { getAvailableOrigins } from '../../core/data/origin';
 import logger from '../../utils/logger';
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
+import {computeProtection} from "../../core/data/protection";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -92,6 +93,8 @@ export class naheulbeukActorSheet extends ActorSheet {
     for (let [k, v] of Object.entries(context.data.stats)) {
       v.label = game.i18n.localize(CONFIG.NAHEULBEUK.stats[k]) ?? k;
     }
+
+    computeProtection(context);
   }
 
   /**
@@ -103,7 +106,6 @@ export class naheulbeukActorSheet extends ActorSheet {
    */
   _prepareItems(context) {
     // Initialize containers.
-    const gear = [];
     const features = [];
     const spells = {
       0: [],
@@ -122,12 +124,8 @@ export class naheulbeukActorSheet extends ActorSheet {
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
-      // Append to gear.
-      if (i.type === 'item') {
-        gear.push(i);
-      }
-      // Append to features.
-      else if (i.type === 'feature') {
+
+      if (i.type === 'feature') {
         features.push(i);
       }
       // Append to spells.
@@ -156,7 +154,6 @@ export class naheulbeukActorSheet extends ActorSheet {
     }
 
     // Assign and return
-    context.gear = gear;
     context.features = features;
     context.spells = spells;
    }

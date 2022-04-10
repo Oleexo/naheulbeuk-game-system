@@ -1,4 +1,4 @@
-import { FoundryValue } from './foundry';
+import {computeTotalValue, FoundryValue} from './foundry';
 
 export interface Stats {
   courage: FoundryValue,
@@ -6,6 +6,12 @@ export interface Stats {
   charisma: FoundryValue,
   dexterity: FoundryValue,
   strength: FoundryValue,
+}
+
+export function computeStatsTotalValues(stats: Stats) {
+  for (let [key, element] of Object.entries(stats)) {
+    computeTotalValue(element);
+  }
 }
 
 export interface StatRestrictions {

@@ -25,7 +25,7 @@
           }
         },
         "protections": {
-          "pr-nat-max": 0
+          "armorMaxType": 0
         },
         "skills": {
           "attack": {

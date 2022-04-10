@@ -4,18 +4,15 @@
   "NAHEULBEUK.AbilityDex": "Adresse",
   "NAHEULBEUK.AbilityInt": "Intelligence",
   "NAHEULBEUK.AbilityCha": "Charisme",
-
   "NAHEULBEUK.AbilityStrAbbr": "fo",
   "NAHEULBEUK.AbilityConAbbr": "cou",
   "NAHEULBEUK.AbilityDexAbbr": "ad",
   "NAHEULBEUK.AbilityIntAbbr": "int",
   "NAHEULBEUK.AbilityChaAbbr": "cha",
-
   "NAHEULBEUK.EffectCreate": "Create Effect",
   "NAHEULBEUK.EffectToggle": "Toggle Effect",
   "NAHEULBEUK.EffectEdit": "Edit Effect",
   "NAHEULBEUK.EffectDelete": "Delete Effect",
-
   "NAHEULBEUK.Add": "Ajouter",
   "NAHEULBEUK.Senses.Title": "Sens",
   "NAHEULBEUK.Senses.Languages": "Langues",
@@ -23,7 +20,6 @@
   "NAHEULBEUK.Senses.Nyctalopia": "Nyctalopie",
   "NAHEULBEUK.Senses.Hearing": "Ouïe",
   "NAHEULBEUK.Senses.Smell": "Odorat",
-
   "NAHEULBEUK.Sex": "Sexe",
   "NAHEULBEUK.Origin": "Origine",
   "NAHEULBEUK.Class": "Métier",
@@ -31,21 +27,25 @@
   "NAHEULBEUK.Height": "Taille",
   "NAHEULBEUK.Weight": "Poids",
   "NAHEULBEUK.Stats": "Statistiques",
-
-
   "NAHEULBEUK.Health": "Energie Vitale",
   "NAHEULBEUK.Astral": "Energie Astrale",
   "NAHEULBEUK.Level": "Niveau",
   "NAHEULBEUK.Experience": "Expérience",
-
   "nhb": {
     "actor": {
       "sheet": {
-      "sex": "Sexe",
-      "origin": "Origine",
-      "pick-sex": "Choisir un sexe",
-      "pick-origin": "Choisir une origine",
-      "pick-job": "Choisir un métier"
+        "sex": "Sexe",
+        "origin": "Origine",
+        "pick-sex": "Choisir un sexe",
+        "pick-origin": "Choisir une origine",
+        "pick-job": "Choisir un métier",
+        "protection": {
+          "title": "Protection"
+        }
+      },
+      "protections": {
+        "natural": "PR Nat.",
+        "magical": "PR Mag."
       },
       "sex": {
         "male": "Homme",
@@ -67,7 +67,7 @@
         "halfling": "Hobbit",
         "gnome": "Gnome"
       },
-      "job": {	
+      "job": {
         "warrior": "Guerrier",
         "assassin": "Assassin",
         "thief": "Voleur",
@@ -88,7 +88,6 @@
   "NAHEULBEUK.MagicPsychic": "Magie Psychique",
   "NAHEULBEUK.Protections.Natural": "Protection Naturelle",
   "NAHEULBEUK.Protections.Magical": "Protection Magique",
-
   "NAHEULBEUK.Armor.Title": "Armure",
   "NAHEULBEUK.Armor.Head": "Tête",
   "NAHEULBEUK.Armor.Arms": "Bras",
@@ -97,7 +96,6 @@
   "NAHEULBEUK.Armor.Hands": "Mains",
   "NAHEULBEUK.Armor.Legs": "Jambes",
   "NAHEULBEUK.Armor.Boots": "Pieds",
-
   "NAHEULBEUK.DamageType": "Type de dégats",
   "NAHEULBEUK.DamageTypes.Sharp": "Tranchant",
   "NAHEULBEUK.DamageTypes.Blunt": "Contondant",

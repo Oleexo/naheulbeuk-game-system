@@ -1,0 +1,21 @@
+<h2>{{localize "nhb.actor.sheet.protection.title"}}</h2>
+
+<div class="ability flexrow flex-group-center">
+    <label for="data.protections.natural"
+           class="resource-label flexlarge align-left">{{localize "nhb.actor.protections.natural"}}</label>
+    <p>{{data.protections.natural.total}}</p>
+    <input type="text" name="data.protections.natural.value" value="{{data.protections.natural.value}}"
+           data-dtype="Number" disabled/>
+    <input type="text" name="data.protections.natural.temp" value="{{data.protections.natural.temp}}"
+           data-dtype="Number"/>
+</div>
+
+<div class="ability flexrow flex-group-center">
+    <label for="data.protections.magical"
+           class="resource-label flexlarge align-left">{{localize "nhb.actor.protections.magical"}}</label>
+    <p>{{data.protections.magical.total}}</p>
+    <input type="text" name="data.protections.magical.value" value="{{data.protections.magical.value}}"
+           data-dtype="Number" disabled/>
+    <input type="text" name="data.protections.magical.temp" value="{{data.protections.magical.temp}}"
+           data-dtype="Number"/>
+</div>
