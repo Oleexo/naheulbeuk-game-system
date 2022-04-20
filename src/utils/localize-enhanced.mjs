@@ -1,10 +1,14 @@
 import logger from './logger';
 
 Hooks.once("ready", () => {
+  setupModule();
+});
+
+export function setupModule() {
   game.i18n.localize = localize;
   Handlebars.registerHelper('localize', localize);
   logger.log("Overriding game.i18n.localize()");
-});
+}
 
 function localize(key, keyAddon = null, options = null) {
   if (keyAddon != null && typeof keyAddon === 'string') {
@@ -32,4 +36,10 @@ function tryGetLocalisation(key, translations) {
     value = value[part];
   }
   return value;
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept((newModule) => {
+    newModule.setupModule();
+  });
 }

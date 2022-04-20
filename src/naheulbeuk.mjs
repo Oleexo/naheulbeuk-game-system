@@ -1,7 +1,7 @@
 import "./scss/naheulbeuk.scss";
 
 // Import document classes.
-import { naheulbeukActor } from "./module/documents/actor.mjs";
+import { NaheulbeukActor } from "./module/documents/actor.mjs";
 import { naheulbeukItem } from "./module/documents/item.mjs";
 // Import sheet classes.
 import { naheulbeukActorSheet } from "./module/sheets/actor-sheet.mjs";
@@ -21,7 +21,7 @@ Hooks.once('init', async function() {
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
   game.naheulbeuk = {
-    naheulbeukActor,
+    naheulbeukActor: NaheulbeukActor,
     naheulbeukItem,
     rollItemMacro
   };
@@ -39,7 +39,7 @@ Hooks.once('init', async function() {
   };
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = naheulbeukActor;
+  CONFIG.Actor.documentClass = NaheulbeukActor;
   CONFIG.Item.documentClass = naheulbeukItem;
 
   // Register sheet application classes

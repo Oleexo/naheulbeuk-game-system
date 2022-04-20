@@ -50,7 +50,7 @@
       "sex": {
         "male": "Homme",
         "female": "Femme",
-        "other": "Tardigrade"
+        "other": "Autre"
       },
       "origin": {
         "human": "Humain",

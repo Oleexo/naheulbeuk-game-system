@@ -5,7 +5,7 @@ import {prepareCharacterData} from "../../core/data/actor-character-data";
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-export class naheulbeukActor extends Actor {
+export class NaheulbeukActor extends Actor {
 
   /** @override */
   prepareData() {
@@ -94,5 +94,4 @@ export class naheulbeukActor extends Actor {
 
     // Process additional NPC data here.
   }
-
 }
