@@ -1,64 +1,124 @@
 {
-  "NAHEULBEUK.StatsStr": "Strength",
-  "NAHEULBEUK.StatsCou": "Constitution",
-  "NAHEULBEUK.StatsDex": "Dexterity",
-  "NAHEULBEUK.StatsInt": "Intelligence",
-  "NAHEULBEUK.StatsCha": "Charisma",
-
-  "NAHEULBEUK.AbilityStrAbbr": "str",
-  "NAHEULBEUK.AbilityConAbbr": "cou",
-  "NAHEULBEUK.AbilityDexAbbr": "dex",
-  "NAHEULBEUK.AbilityIntAbbr": "int",
-  "NAHEULBEUK.AbilityChaAbbr": "cha",
-
-  "NAHEULBEUK.EffectCreate": "Create Effect",
-  "NAHEULBEUK.EffectToggle": "Toggle Effect",
-  "NAHEULBEUK.EffectEdit": "Edit Effect",
-  "NAHEULBEUK.EffectDelete": "Delete Effect",
-
-  "NAHEULBEUK.Add": "Add",
-  "NAHEULBEUK.Senses.Title": "Senses",
-  "NAHEULBEUK.Senses.Languages": "Languages",
-  "NAHEULBEUK.Senses.Vision": "Vision",
-  "NAHEULBEUK.Senses.Nyctalopia": "Nyctalopia",
-  "NAHEULBEUK.Senses.Hearing": "Hearing",
-  "NAHEULBEUK.Senses.Smell": "Smell",
-
-  "NAHEULBEUK.Sex": "Sex",
-  "NAHEULBEUK.Origin": "Origin",
-  "NAHEULBEUK.Class": "Class",
-  "NAHEULBEUK.Age": "Age",
-  "NAHEULBEUK.Height": "Height",
-  "NAHEULBEUK.Weight": "Weight",
-  "NAHEULBEUK.Stats": "Stats",
-
-  "NAHEULBEUK.Health": "Health",
-  "NAHEULBEUK.Astral": "Astral",
-  "NAHEULBEUK.Level": "Level",
-  "NAHEULBEUK.Experience": "Experience",
-
-  "NAHEULBEUK.Attack": "Attack",
-  "NAHEULBEUK.Parade": "Parade",
-  "NAHEULBEUK.Throw": "Throw",
-  "NAHEULBEUK.Dodge": "Dodge",
-  "NAHEULBEUK.MagicPhysical": "Physical Magic",
-  "NAHEULBEUK.MagicPsychic": "Psychic Magic",
-  "NAHEULBEUK.Protections.Natural": "Natural Protection",
-  "NAHEULBEUK.Protections.Magical": "Magical Protection",
-
-  "NAHEULBEUK.Armor.Title": "Armor",
-  "NAHEULBEUK.Armor.Head": "Head",
-  "NAHEULBEUK.Armor.Arms": "Arms",
-  "NAHEULBEUK.Armor.Chest": "Chest",
-  "NAHEULBEUK.Armor.Shield": "Shield",
-  "NAHEULBEUK.Armor.Hands": "Hands",
-  "NAHEULBEUK.Armor.Legs": "Legs",
-  "NAHEULBEUK.Armor.Boots": "Boots",
-
-  "NAHEULBEUK.DamageType": "Damage type",
-  "NAHEULBEUK.DamageTypes.Sharp": "Sharp",
-  "NAHEULBEUK.DamageTypes.Blunt": "Blunt",
-  "NAHEULBEUK.DamageTypes.Projectile": "Projectile",
-  "NAHEULBEUK.DamageTypes.BareHand": "Bare Hand",
-  "NAHEULBEUK.Damage": "Damage"
+  "nhb": {
+    "ability": {
+      "title": "Ability",
+      "str": "Strength",
+      "cou": "Courage",
+      "dex": "Dexterity",
+      "int": "Intelligence",
+      "cha": "Charisma",
+      "abbr": {
+        "str": "str",
+        "cou": "cou",
+        "dex": "dex",
+        "int": "int",
+        "cha": "cha"
+      }
+    },
+    "action": {
+      "attack": "Attack",
+      "parade": "Parade",
+      "throw": "Throw",
+      "dodge": "Dodge"
+    },
+    "actor": {
+      "sheet": {
+        "pick-sex": "Pick a sex",
+        "pick-origin": "Pick an origin",
+        "pick-job": "Pick a job"
+      },
+      "age": "Age",
+      "height": "Height",
+      "weight": "Weight",
+      "stats": "Statistics",
+      "health": "Vital energy",
+      "astral": "Astral energy",
+      "level": "Level",
+      "experience": "Experience",
+      "sex": {
+        "title": "Sex",
+        "male": "Male",
+        "female": "Female",
+        "other": "Other"
+      },
+      "origin": {
+        "title": "Origin",
+        "human": "Human",
+        "barbarian": "Barbarian",
+        "dwarf": "Dwarf",
+        "hight-elf": "Hight elf",
+        "wood-elf": "Wood elf",
+        "dark-elf": "Dark elf",
+        "half-elf": "Half elf",
+        "orc": "Orc",
+        "half-orc": "Half orc",
+        "goblin": "Goblin",
+        "ogre": "Ogre",
+        "halfling": "Halfling",
+        "gnome": "Gnome"
+      },
+      "job": {
+        "title": "Job",
+        "warrior": "Warrior",
+        "assassin": "Assassin",
+        "thief": "Thief",
+        "ranger": "Ranger",
+        "bard": "Bard",
+        "merchant": "Merchant",
+        "engineer": "Engineer",
+        "pirate": "Pirate",
+        "noble": "Noble"
+      }
+    },
+    "armor": {
+      "title": "Armor",
+      "head": "Head",
+      "arms": "Arms",
+      "chest": "Chest",
+      "shield": "Shield",
+      "hands": "Hands",
+      "legs": "Legs",
+      "boots": "Boots"
+    },
+    "damage": {
+      "title": "Damage",
+      "type": {
+        "tile": "Damage type",
+        "sharp": "Sharp",
+        "blunt": "Blunt",
+        "projectile": "Projectile",
+        "bare-handed": "Bare handed"
+      }
+    },
+    "effect": {
+      "create": "Create effect",
+      "toggle": "Toggle effect",
+      "edit": "Edit effect",
+      "delete": "Remove effect"
+    },
+    "magic": {
+      "physical": "Physical magic",
+      "psychic": "Psychic magic"
+    },
+    "misc": {
+      "add": "Add"
+    },
+    "protections": {
+      "title": "Protections",
+      "natural": "Natural protection",
+      "magical": "Magical protection",
+      "abbr": {
+        "natural": "Nat. PR",
+        "magical": "Mag. PR"
+      }
+    },
+    "sense": {
+      "title": "Senses",
+      "vision": "Vision",
+      "hearing": "Hearing",
+      "smell": "Smell",
+      "nyctalopia": "Nyctalopia",
+      "languages": "Languages"
+    }
+  }
 }

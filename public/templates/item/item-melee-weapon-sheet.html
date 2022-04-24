@@ -27,7 +27,7 @@
       <div class="ability flexrow flex-group-center">
         <label for="data.stats.{{key}}"
                class="resource-label flexlarge align-left"
-               data-label="{{ability.label}}">{{localize "NAHEULBEUK.Stats" key }}</label>
+               data-label="{{ability.label}}">{{localize "nhb.ability.title" key }}</label>
         <input type="text" name="data.stats.{{key}}" value="{{ability}}"
                data-dtype="Number"/>
       </div>
@@ -35,28 +35,28 @@
 
       <div class="ability flexrow flex-group-center">
         <label for="data.skills.attack"
-               class="resource-label flexlarge align-left">{{localize "NAHEULBEUK.Attack"}}</label>
+               class="resource-label flexlarge align-left">{{localize "nhb.action.attack"}}</label>
         <input type="text" name="data.skills.attack" value="{{data.skills.attack}}"
                data-dtype="Number"/>
       </div>
 
       <div class="ability flexrow flex-group-center">
         <label for="data.skills.parade"
-               class="resource-label flexlarge align-left">{{localize "NAHEULBEUK.Parade"}}</label>
+               class="resource-label flexlarge align-left">{{localize "nhb.action.parade"}}</label>
         <input type="text" name="data.skills.parade" value="{{data.skills.parade}}"
                data-dtype="Number"/>
       </div>
 
       <div class="ability flexrow flex-group-center">
         <label for="data.damage"
-               class="resource-label flexlarge align-left">{{localize "NAHEULBEUK.Damage"}}</label>
+               class="resource-label flexlarge align-left">{{localize "nhb.damage.title"}}</label>
         <input type="text" name="data.damage" value="{{data.damage}}"
                data-dtype="Number"/>
       </div>
 
       <div class="ability flexrow flex-group-center">
         <label for="data.damage-type"
-               class="resource-label flexlarge align-left">{{localize "NAHEULBEUK.DamageType"}}</label>
+               class="resource-label flexlarge align-left">{{localize "nhb.damage.type.title"}}</label>
         <select id="data.damage-type" name="data.damage-type">
           {{selectOptions damageTypes selected=data.damage-type localize=true nameAttr="value" labelAttr="label"}}
         </select>

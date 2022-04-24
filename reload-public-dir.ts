@@ -11,6 +11,7 @@ function handleHotUpdate({ file, server }: HmrContext) {
       if (error) {
         logger.warn(`[vite-plugin-reload-public-dir] ${error}`);
         logger.error(`[vite-plugin-reload-public-dir] ${stderr}`);
+        return;
       }
       logger.info(`[vite-plugin-reload-public-dir] reloading`);
       server.ws.send({ type: 'full-reload' });

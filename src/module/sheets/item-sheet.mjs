@@ -50,19 +50,19 @@ export class naheulbeukItemSheet extends ItemSheet {
         context.data = itemData.data;
         context.flags = itemData.flags;
         context.armorPositions = [
-            {label: "NAHEULBEUK.Armor.Head", value: "head"},
-            {label: "NAHEULBEUK.Armor.Arms", value: "arms"},
-            {label: "NAHEULBEUK.Armor.Chest", value: "chest"},
-            {label: "NAHEULBEUK.Armor.Shield", value: "shield"},
-            {label: "NAHEULBEUK.Armor.Hands", value: "hands"},
-            {label: "NAHEULBEUK.Armor.Legs", value: "legs"},
-            {label: "NAHEULBEUK.Armor.Boots", value: "boots"},
+            {label: "nhb.armor.head", value: "head"},
+            {label: "nhb.armor.arms", value: "arms"},
+            {label: "nhb.armor.chest", value: "chest"},
+            {label: "nhb.armor.shield", value: "shield"},
+            {label: "nhb.armor.hands", value: "hands"},
+            {label: "nhb.armor.legs", value: "legs"},
+            {label: "nhb.armor.boots", value: "boots"},
         ];
         context.damageTypes = [
-            {label: "NAHEULBEUK.DamageTypes.Sharp", value: "sharp"},
-            {label: "NAHEULBEUK.DamageTypes.Blunt", value: "blunt"},
-            {label: "NAHEULBEUK.DamageTypes.Projectile", value: "projectile"},
-            {label: "NAHEULBEUK.DamageTypes.BareHand", value: "bare-hand"},
+            {label: "nhb.damage.type.sharp", value: "sharp"},
+            {label: "nhb.damage.type.blunt", value: "blunt"},
+            {label: "nhb.damage.type.projectile", value: "projectile"},
+            {label: "nhb.damage.type.bare-handed", value: "bare-hand"},
         ];
         return context;
     }

@@ -1,62 +1,52 @@
 {
-  "NAHEULBEUK.AbilityStr": "Force",
-  "NAHEULBEUK.AbilityCou": "Courage",
-  "NAHEULBEUK.AbilityDex": "Adresse",
-  "NAHEULBEUK.AbilityInt": "Intelligence",
-  "NAHEULBEUK.AbilityCha": "Charisme",
-  "NAHEULBEUK.AbilityStrAbbr": "fo",
-  "NAHEULBEUK.AbilityConAbbr": "cou",
-  "NAHEULBEUK.AbilityDexAbbr": "ad",
-  "NAHEULBEUK.AbilityIntAbbr": "int",
-  "NAHEULBEUK.AbilityChaAbbr": "cha",
-  "NAHEULBEUK.EffectCreate": "Create Effect",
-  "NAHEULBEUK.EffectToggle": "Toggle Effect",
-  "NAHEULBEUK.EffectEdit": "Edit Effect",
-  "NAHEULBEUK.EffectDelete": "Delete Effect",
-  "NAHEULBEUK.Add": "Ajouter",
-  "NAHEULBEUK.Senses.Title": "Sens",
-  "NAHEULBEUK.Senses.Languages": "Langues",
-  "NAHEULBEUK.Senses.Vision": "Vision",
-  "NAHEULBEUK.Senses.Nyctalopia": "Nyctalopie",
-  "NAHEULBEUK.Senses.Hearing": "Ouïe",
-  "NAHEULBEUK.Senses.Smell": "Odorat",
-  "NAHEULBEUK.Sex": "Sexe",
-  "NAHEULBEUK.Origin": "Origine",
-  "NAHEULBEUK.Class": "Métier",
-  "NAHEULBEUK.Age": "Âge",
-  "NAHEULBEUK.Height": "Taille",
-  "NAHEULBEUK.Weight": "Poids",
-  "NAHEULBEUK.Stats": "Statistiques",
-  "NAHEULBEUK.Health": "Energie Vitale",
-  "NAHEULBEUK.Astral": "Energie Astrale",
-  "NAHEULBEUK.Level": "Niveau",
-  "NAHEULBEUK.Experience": "Expérience",
   "nhb": {
+    "ability": {
+      "title": "Caractéristiques",
+      "str": "Force",
+      "cou": "Courage",
+      "dex": "Adresse",
+      "int": "Intelligence",
+      "cha": "Charisme",
+      "abbr": {
+        "str": "fo",
+        "cou": "co",
+        "dex": "ad",
+        "int": "int",
+        "cha": "cha"
+      }
+    },
+    "action": {
+      "attack": "Attaque",
+      "parade": "Parade",
+      "throw": "Jet",
+      "dodge": "Esquive"
+    },
     "actor": {
       "sheet": {
-        "sex": "Sexe",
-        "origin": "Origine",
         "pick-sex": "Choisir un sexe",
         "pick-origin": "Choisir une origine",
-        "pick-job": "Choisir un métier",
-        "protection": {
-          "title": "Protection"
-        }
+        "pick-job": "Choisir un métier"
       },
-      "protections": {
-        "natural": "PR Nat.",
-        "magical": "PR Mag."
-      },
+      "age": "Âge",
+      "height": "Taille",
+      "weight": "Poids",
+      "stats": "Statistiques",
+      "health": "Energie Vitale",
+      "astral": "Energie Astrale",
+      "level": "Niveau",
+      "experience": "Expérience",
       "sex": {
+        "title": "Sexe",
         "male": "Homme",
         "female": "Femme",
         "other": "Autre"
       },
       "origin": {
+        "title": "Origine",
         "human": "Humain",
         "barbarian": "Barbare",
         "dwarf": "Nain",
-        "hight-elf": "Haut elf",
+        "hight-elf": "Haut elfe",
         "wood-elf": "Elfe Sylvain",
         "dark-elf": "Elfe Noir",
         "half-elf": "Demi-Elfe",
@@ -68,6 +58,7 @@
         "gnome": "Gnome"
       },
       "job": {
+        "title": "Métier",
         "warrior": "Guerrier",
         "assassin": "Assassin",
         "thief": "Voleur",
@@ -78,28 +69,56 @@
         "pirate": "Pirate",
         "noble": "Noble"
       }
+    },
+    "armor": {
+      "title": "Armure",
+      "head": "Tête",
+      "arms": "Bras",
+      "chest": "Corps",
+      "shield": "Bouclier",
+      "hands": "Mains",
+      "legs": "Jambes",
+      "boots": "Pieds"
+    },
+    "damage": {
+      "title": "Dégâts",
+      "type": {
+        "title": "Type de dégâts",
+        "sharp": "Tranchant",
+        "blunt": "Contondant",
+        "projectile": "Projectile",
+        "bare-handed": "Main nue"
+      }
+    },
+    "effect": {
+      "create": "Créer un effet",
+      "toggle": "Activer/Désactiver l'effet",
+      "edit": "Editer l'effet",
+      "delete": "Supprimer l'effet"
+    },
+    "magic": {
+      "physical": "Magie Physique",
+      "psychic": "Magie Psychique"
+    },
+    "misc": {
+      "add": "Ajouter"
+    },
+    "protections": {
+      "title": "Protection",
+      "natural": "Protection Naturelle",
+      "magical": "Protection Magique",
+      "abbr": {
+        "natural": "PR Nat.",
+        "magical": "PR Mag."
+      }
+    },
+    "sense": {
+      "title": "Sens",
+      "vision": "Vision",
+      "hearing": "Ouïe",
+      "smell": "Odorat",
+      "nyctalopia": "Nyctalopie",
+      "languages": "Langues"
     }
-  },
-  "NAHEULBEUK.Attack": "Attaque",
-  "NAHEULBEUK.Parade": "Parade",
-  "NAHEULBEUK.Throw": "Jet",
-  "NAHEULBEUK.Dodge": "Esquive",
-  "NAHEULBEUK.MagicPhysical": "Magie Physique",
-  "NAHEULBEUK.MagicPsychic": "Magie Psychique",
-  "NAHEULBEUK.Protections.Natural": "Protection Naturelle",
-  "NAHEULBEUK.Protections.Magical": "Protection Magique",
-  "NAHEULBEUK.Armor.Title": "Armure",
-  "NAHEULBEUK.Armor.Head": "Tête",
-  "NAHEULBEUK.Armor.Arms": "Bras",
-  "NAHEULBEUK.Armor.Chest": "Poitrine",
-  "NAHEULBEUK.Armor.Shield": "Bouclier",
-  "NAHEULBEUK.Armor.Hands": "Mains",
-  "NAHEULBEUK.Armor.Legs": "Jambes",
-  "NAHEULBEUK.Armor.Boots": "Pieds",
-  "NAHEULBEUK.DamageType": "Type de dégats",
-  "NAHEULBEUK.DamageTypes.Sharp": "Tranchant",
-  "NAHEULBEUK.DamageTypes.Blunt": "Contondant",
-  "NAHEULBEUK.DamageTypes.Projectile": "Projectile",
-  "NAHEULBEUK.DamageTypes.BareHand": "Main nue",
-  "NAHEULBEUK.Damage": "Dégats"
+  }
 }

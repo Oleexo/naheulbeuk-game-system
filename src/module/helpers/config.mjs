@@ -11,18 +11,17 @@ NAHEULBEUK.foobar = {
  * @type {Object}
  */
  NAHEULBEUK.stats = {
-  "strength": "NAHEULBEUK.StatsStr",
-  "dexterity": "NAHEULBEUK.StatsDex",
-  "courage": "NAHEULBEUK.StatsCou",
-  "intelligence": "NAHEULBEUK.StatsInt",
-  "charisma": "NAHEULBEUK.StatsCha"
+  "strength": "nhb.ability.str",
+  "dexterity": "nhb.ability.dex",
+  "courage": "nhb.ability.cou",
+  "intelligence": "nhb.ability.int",
+  "charisma": "nhb.ability.cha",
 };
 
 NAHEULBEUK.abilityAbbreviations = {
-  "str": "NAHEULBEUK.AbilityStrAbbr",
-  "dex": "NAHEULBEUK.AbilityDexAbbr",
-  "cou": "NAHEULBEUK.AbilityCouAbbr",
-  "int": "NAHEULBEUK.AbilityIntAbbr",
-  "wis": "NAHEULBEUK.AbilityWisAbbr",
-  "cha": "NAHEULBEUK.AbilityChaAbbr"
+  "str": "nhb.ability.abbr.str",
+  "dex": "nhb.ability.abbr.dex",
+  "cou": "nhb.ability.abbr.cou",
+  "int": "nhb.ability.abbr.int",
+  "cha": "nhb.ability.abbr.cha",
 };
