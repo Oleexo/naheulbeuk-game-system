@@ -1,6 +1,6 @@
 import { exec, execFile } from "child_process";
 import path, { resolve } from "path";
-import { HmrContext, PluginOption, ViteDevServer } from "vite";
+import { build, HmrContext, PluginOption, ViteDevServer } from "vite";
 
 function handleHotUpdate() {
   let timeoutId: NodeJS.Timeout = null;
@@ -20,19 +20,9 @@ function handleHotUpdate() {
   };
 }
 
-function execViteBuildAndReload(server: ViteDevServer) {
-  const { logger } = server.config;
-
-  exec(`npm run build`, (error, stdout, stderr) => {
-    logger.info(`[vite-plugin-reload-public-dir] ${stdout}`);
-    if (error) {
-      logger.warn(`[vite-plugin-reload-public-dir] ${error}`);
-      logger.error(`[vite-plugin-reload-public-dir] ${stderr}`);
-      return;
-    }
-    logger.info(`[vite-plugin-reload-public-dir] reloading`);
-    server.ws.send({ type: "full-reload" });
-  });
+async function execViteBuildAndReload(server: ViteDevServer) {
+  await build();
+  server.ws.send({ type: "full-reload" });
 }
 
 export default (): PluginOption => {
