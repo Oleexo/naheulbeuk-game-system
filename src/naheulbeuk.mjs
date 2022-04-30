@@ -2,15 +2,15 @@ import "./scss/naheulbeuk.scss";
 
 // Import document classes.
 import { NaheulbeukActor } from "./module/documents/actor.mjs";
-import { naheulbeukItem } from "./module/documents/item.mjs";
+import { NaheulbeukItem } from "./module/documents/item.mjs";
 // Import sheet classes.
-import { naheulbeukActorSheet } from "./module/sheets/actor-sheet.mjs";
-import { naheulbeukItemSheet } from "./module/sheets/item-sheet.mjs";
+import { NaheulbeukActorSheet } from "./module/sheets/actor-sheet.mjs";
+import { NaheulbeukItemSheet } from "./module/sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./module/helpers/templates.mjs";
 import { NAHEULBEUK } from "./module/helpers/config.mjs";
 
-import "./utils/localize-enhanced.mjs";
+import "./core/utils/localize-enhanced.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -22,7 +22,7 @@ Hooks.once('init', async function() {
   // accessible in global contexts.
   game.naheulbeuk = {
     naheulbeukActor: NaheulbeukActor,
-    naheulbeukItem,
+    naheulbeukItem: NaheulbeukItem,
     rollItemMacro
   };
 
@@ -40,13 +40,13 @@ Hooks.once('init', async function() {
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = NaheulbeukActor;
-  CONFIG.Item.documentClass = naheulbeukItem;
+  CONFIG.Item.documentClass = NaheulbeukItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("naheulbeuk", naheulbeukActorSheet, { makeDefault: true });
+  Actors.registerSheet("naheulbeuk", NaheulbeukActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("naheulbeuk", naheulbeukItemSheet, { makeDefault: true });
+  Items.registerSheet("naheulbeuk", NaheulbeukItemSheet, { makeDefault: true });
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();

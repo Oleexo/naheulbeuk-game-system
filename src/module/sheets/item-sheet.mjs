@@ -2,7 +2,7 @@
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export class naheulbeukItemSheet extends ItemSheet {
+export class NaheulbeukItemSheet extends ItemSheet {
 
     /** @override */
     static get defaultOptions() {

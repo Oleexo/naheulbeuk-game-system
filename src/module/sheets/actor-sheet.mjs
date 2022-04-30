@@ -1,6 +1,5 @@
 import { getAvailableJobs } from '../../core/data/job';
 import { getAvailableOrigins } from '../../core/data/origin';
-import logger from '../../utils/logger';
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 import {computeProtection} from "../../core/data/protection";
 
@@ -8,7 +7,7 @@ import {computeProtection} from "../../core/data/protection";
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class naheulbeukActorSheet extends ActorSheet {
+export class NaheulbeukActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
