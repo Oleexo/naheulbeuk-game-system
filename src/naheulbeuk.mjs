@@ -7,8 +7,8 @@ import { NaheulbeukItem } from "./module/documents/item.mjs";
 import { NaheulbeukActorSheet } from "./module/sheets/actor-sheet.mjs";
 import { NaheulbeukItemSheet } from "./module/sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
-import { preloadHandlebarsTemplates } from "./module/helpers/templates.mjs";
 import { NAHEULBEUK } from "./module/helpers/config.mjs";
+import { initializeHandlebars } from './module/helpers/templates.mjs';
 
 import "./core/utils/localize-enhanced.mjs";
 
@@ -48,29 +48,8 @@ Hooks.once('init', async function() {
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("naheulbeuk", NaheulbeukItemSheet, { makeDefault: true });
 
-  // Preload Handlebars templates.
-  return preloadHandlebarsTemplates();
+  return initializeHandlebars();
 });
-
-/* -------------------------------------------- */
-/*  Handlebars Helpers                          */
-/* -------------------------------------------- */
-
-// If you need to add Handlebars helpers, here are a few useful examples:
-Handlebars.registerHelper('concat', function() {
-  var outStr = '';
-  for (var arg in arguments) {
-    if (typeof arguments[arg] != 'object') {
-      outStr += arguments[arg];
-    }
-  }
-  return outStr;
-});
-
-Handlebars.registerHelper('toLowerCase', function(str) {
-  return str.toLowerCase();
-});
-
 
 /* -------------------------------------------- */
 /*  Ready Hook                                  */

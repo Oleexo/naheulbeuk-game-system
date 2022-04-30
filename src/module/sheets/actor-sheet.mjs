@@ -2,6 +2,8 @@ import { getAvailableJobs } from '../../core/data/job';
 import { getAvailableOrigins } from '../../core/data/origin';
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 import {computeProtection} from "../../core/data/protection";
+import { chatService } from '../../core/chat-service';
+import { RollType } from '../../core/utils/roll-type';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -88,11 +90,6 @@ export class NaheulbeukActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterData(context) {
-    // Handle ability scores.
-    for (let [k, v] of Object.entries(context.data.stats)) {
-      v.label = game.i18n.localize(CONFIG.NAHEULBEUK.stats[k]) ?? k;
-    }
-
     computeProtection(context);
   }
 
@@ -170,6 +167,8 @@ export class NaheulbeukActorSheet extends ActorSheet {
       item.sheet.render(true);
     });
 
+    html.find('.rollable-ability').click(this.onAbilityRoll.bind(this));
+
     // -------------------------------------------------------------
     // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
@@ -202,6 +201,19 @@ export class NaheulbeukActorSheet extends ActorSheet {
         li.addEventListener("dragstart", handler, false);
       });
     }
+  }
+
+  async onAbilityRoll(event) {
+    event.preventDefault();
+    const ability = event.currentTarget.dataset.ability;
+
+    chatService.sendRoll(RollType.ABILITY,
+      Roll.fromTerms([
+        new DiceTerm({faces: 20}),
+      ]), {
+        ability,
+        ...this.actor.data.data.stats[ability]
+      });
   }
 
   /**

@@ -2,17 +2,17 @@
   "nhb": {
     "ability": {
       "title": "Ability",
-      "str": "Strength",
-      "cou": "Courage",
-      "dex": "Dexterity",
-      "int": "Intelligence",
-      "cha": "Charisma",
+      "strength": "Strength",
+      "courage": "Courage",
+      "dexterity": "Dexterity",
+      "intelligence": "Intelligence",
+      "charisma": "Charisma",
       "abbr": {
-        "str": "str",
-        "cou": "cou",
-        "dex": "dex",
-        "int": "int",
-        "cha": "cha"
+        "strength": "str",
+        "courage": "cou",
+        "dexterity": "dex",
+        "intelligence": "int",
+        "charisma": "cha"
       }
     },
     "action": {
@@ -79,6 +79,12 @@
       "hands": "Hands",
       "legs": "Legs",
       "boots": "Boots"
+    },
+    "chat": {
+      "success": "Success",
+      "critical-success": "Critical success",
+      "failure": "Failure",
+      "critical-failure": "Critical failure"
     },
     "damage": {
       "title": "Damage",
