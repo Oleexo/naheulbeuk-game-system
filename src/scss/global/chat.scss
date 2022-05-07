@@ -1,0 +1,19 @@
+
+.chat-message {
+  background: none;
+  border: 0.8rem solid transparent;
+  border-image: url(/assets/old-paper.svg) 40 fill;
+  border-image-outset: 0.1rem;
+  margin: 0.5rem;
+  padding: 0;
+}
+
+.roll-success {
+  color: green;
+  font-weight: 700;
+}
+
+.roll-failure {
+  color: red;
+  font-weight: 700;
+}
