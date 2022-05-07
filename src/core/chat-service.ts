@@ -8,7 +8,6 @@ class ChatService {
 
   async sendRoll(type: RollType, roll: Roll, context: any) {
     await roll.evaluate();
-    console.log(context);
     const html = await renderTemplate(this.templates[type], {
       roll: {
         result: roll.result,
@@ -18,14 +17,14 @@ class ChatService {
     });
 
     const rollMode = game.settings.get("core", "rollMode");
-
-    ChatMessage.create({
+    await ChatMessage.create({
       type: CONST.CHAT_MESSAGE_TYPES.ROLL,
       rollMode,
       roll,
       whisper: this.getWhisper(rollMode),
       content: html,
-    });
+    })
+    AudioHelper.play({ src: 'sounds/dice.wav', loop: false }, true);
   }
 
   private getWhisper(rollMode: string): string[] {

@@ -6,8 +6,9 @@ declare const game: {
   }
 }
 
-//#region Roll
+declare function renderTemplate(template: string, data: any): Promise<string>;
 
+//#region Roll
 declare class Roll {
   static fromTerms(terms: RollTerm[], options?: any): Roll;
   evaluate(): Promise<Roll>;
@@ -53,4 +54,9 @@ declare const ChatMessage: {
 }
 //#endregion
 
-declare function renderTemplate(template: string, data: any): Promise<string>;
+//#region Audio
+
+declare class AudioHelper {
+  static play(option: { src?: string, volume?:number, autoplay?: boolean, loop?: boolean }, push?: boolean): Promise<any>;
+}
+//#endregion
