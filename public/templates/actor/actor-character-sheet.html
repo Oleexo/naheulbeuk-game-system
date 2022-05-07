@@ -1,4 +1,4 @@
-<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+<form class="{{cssClass}} {{actor.type}} flexcol nbh-font-light" autocomplete="off">
 
     {{!-- Sheet Header --}}
     <header class="sheet-header">
@@ -35,25 +35,27 @@
         {{!-- Owned Features Tab --}}
         <div class="tab features" data-group="primary" data-tab="features">
             <section class="grid grid-7col">
-                <aside class="sidebar grid-span-4">
+                <div class="grid-span-3 grid-span-row-2">
                     {{> "systems/naheulbeuk/templates/actor/parts/actor-stats.html"}}
-                    {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-                    use both the "grid" and "grid-Ncol" class where "N" can be any number
-                    from 1 to 12 and will create that number of columns. --}}
-                </aside>
-
-                <section>
+                </div>
+                <div>
+                    <div class="no-title"></div>
                     {{> "systems/naheulbeuk/templates/actor/parts/actor-health.html"}}
                     {{> "systems/naheulbeuk/templates/actor/parts/actor-astral.html"}}
-                    {{> "systems/naheulbeuk/templates/actor/parts/actor-exp.html"}}
-                </section>
+                </div>
 
-                {{!-- For the main features list, span the right two columns --}}
-                <section class="main grid-span-2">
+                <div class="grid-span-3">
                     {{> "systems/naheulbeuk/templates/actor/parts/actor-senses.html"}}
-                    {{> "systems/naheulbeuk/templates/actor/parts/actor-protection.html"}}
-                </section>
+                </div>
 
+                <div>
+                    <div class="no-title"></div>
+                    {{> "systems/naheulbeuk/templates/actor/parts/actor-exp.html"}}
+                </div>
+
+                <div class="grid-span-3">
+                    {{> "systems/naheulbeuk/templates/actor/parts/actor-protection.html"}}
+                </div>
             </section>
         </div>
 
