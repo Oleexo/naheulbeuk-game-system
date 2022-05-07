@@ -17,14 +17,6 @@ const config: UserConfig = {
       },
     },
   },
-  resolve: {
-    alias: [
-      {
-        find: "./runtimeConfig",
-        replacement: "./runtimeConfig.browser", // thanks @aws-sdk
-      },
-    ],
-  },
   build: {
     outDir: path.resolve(__dirname, "foundryvtt-data/Data/systems/naheulbeuk"),
     emptyOutDir: true,
