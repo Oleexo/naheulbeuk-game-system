@@ -61,7 +61,7 @@ export class NaheulbeukActorSheet extends ActorSheet {
     // Prepare active effects
     context.effects = prepareActiveEffectCategories(this.actor.effects);
     
-    context.sexs = this.getSexs();
+    context.sexes = this.getSexes();
     context.origins = [
       { label: "nhb.actor.sheet.pick-origin", name: "" },
       ...getAvailableOrigins(actorData.data.stats)
@@ -73,7 +73,7 @@ export class NaheulbeukActorSheet extends ActorSheet {
     return context;
   }
 
-  getSexs() {
+  getSexes() {
     return [
       { label: "nhb.actor.sheet.pick-sex", value: "" },
       { label: "nhb.actor.sex.male", value: "male" },

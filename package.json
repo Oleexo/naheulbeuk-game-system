@@ -9,7 +9,7 @@
   "scripts": {
     "build": "vite build",
     "watch": "vite build -w",
-    "serve": "vite serve"
+    "serve": "vite build && vite serve"
   },
   "browserslist": [
     "last 3 versions"
