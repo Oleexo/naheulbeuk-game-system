@@ -4,20 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dccff3f5-75e8-424a-bbb9-78b2fa740ab2" name="Changes" comment="item weapon">
-      <change afterPath="$PROJECT_DIR$/public/templates/actor/parts/actor-protection.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/data/actor-character-data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/data/item/item.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/data/protection.ts" afterDir="false" />
+    <list default="true" id="dccff3f5-75e8-424a-bbb9-78b2fa740ab2" name="Changes" comment="protection">
+      <change afterPath="$PROJECT_DIR$/public/templates/chat/skill-roll.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/utils/object-helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/lang/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/lang/fr.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/lang/fr.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/template.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/template.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/actor/actor-character-sheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/actor/actor-character-sheet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/actor/parts/actor-items.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/actor/parts/actor-items.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/templates/actor/parts/actor-sex.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/actor/parts/actor-sex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/templates/actor/parts/actor-stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/actor/parts/actor-stats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/chat-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/chat-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/data/actor-character-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/data/actor-character-data.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/data/foundry.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/data/foundry.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/data/stats.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/data/stats.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/documents/actor.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/documents/actor.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/helpers/templates.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/helpers/templates.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/data/protection.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/data/protection.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/module/sheets/actor-sheet.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/sheets/actor-sheet.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,23 +60,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="E:\maxim\Dev\git\naheulbeuk-game-system\node_modules\typescript\lib" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/maxim/Dev/git/naheulbeuk-game-system/public/templates/chat",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "E:\\maxim\\Dev\\git\\naheulbeuk-game-system\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\maxim\Dev\git\naheulbeuk-game-system\public\templates\chat" />
       <recent name="E:\maxim\Dev\git\naheulbeuk-game-system\lang" />
     </key>
   </component>
@@ -99,7 +98,11 @@
       <workItem from="1649435572871" duration="8924000" />
       <workItem from="1649495084210" duration="12084000" />
       <workItem from="1649534974459" duration="1449000" />
-      <workItem from="1649577171304" duration="5106000" />
+      <workItem from="1649577171304" duration="5576000" />
+      <workItem from="1651345466352" duration="149000" />
+      <workItem from="1651998759472" duration="176000" />
+      <workItem from="1652002469991" duration="2611000" />
+      <workItem from="1653640111864" duration="3490000" />
     </task>
     <task id="LOCAL-00001" summary="init template">
       <created>1649266927471</created>
@@ -143,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649535017022</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="protection">
+      <created>1649585651276</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1649585651276</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +177,7 @@
     <MESSAGE value="base stats" />
     <MESSAGE value="Base item armor" />
     <MESSAGE value="item weapon" />
-    <option name="LAST_COMMIT_MESSAGE" value="item weapon" />
+    <MESSAGE value="protection" />
+    <option name="LAST_COMMIT_MESSAGE" value="protection" />
   </component>
 </project>

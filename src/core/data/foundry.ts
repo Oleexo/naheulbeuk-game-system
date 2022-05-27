@@ -36,5 +36,5 @@ export function computeTotalValue(element: FoundryValue) {
   } else {
     element.mod = 0;
   }
-  element.total = Math.floor(total);
+  element.total = Math.round(total);
 }

@@ -1,0 +1,18 @@
+<div class="wrapper grid-2col nhb-font center">
+    <h3>{{localize "nhb.action" skill}}</h3>
+    {{#if (eq roll.result 1) }}
+    <h4 class="roll-success">{{localize "nhb.chat.critical-success"}}</h4>
+    {{else if (eq roll.result 20) }}
+    <h4 class="roll-failure">{{localize "nhb.chat.critical-failure"}}</h4>
+    {{else if (gt total roll.result) }}
+    <h4 class="roll-success">{{localize "nhb.chat.success"}}</h4>
+    {{else}}
+    <h4 class="roll-failure">{{localize "nhb.chat.failure"}}</h4>
+    {{/if}}
+    <span>
+      {{total}} ({{value}} + {{temp}} + {{mod}})
+    </span>
+    <span>
+      {{roll.result}}
+    </span>
+</div>

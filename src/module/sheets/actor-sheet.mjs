@@ -4,6 +4,7 @@ import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/ef
 import {computeProtection} from "../../core/data/protection";
 import { chatService } from '../../core/chat-service';
 import { RollType } from '../../core/utils/roll-type';
+import {getValueFromString} from "../../core/utils/object-helper";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -168,6 +169,7 @@ export class NaheulbeukActorSheet extends ActorSheet {
     });
 
     html.find('.rollable-ability').click(this.onAbilityRoll.bind(this));
+    html.find('.rollable-skills').click(this.onSkillRoll.bind(this));
 
     // -------------------------------------------------------------
     // Everything below here is only needed if the sheet is editable
@@ -214,6 +216,19 @@ export class NaheulbeukActorSheet extends ActorSheet {
         ability,
         ...this.actor.data.data.stats[ability]
       });
+  }
+
+  async onSkillRoll(event) {
+    event.preventDefault();
+    const skill = event.currentTarget.dataset.skill;
+    let v = getValueFromString(this.actor.data.data.skills, skill);
+    chatService.sendRoll(RollType.SKILL,
+        Roll.fromTerms([
+          new DiceTerm({faces: 20}),
+        ]), {
+          skill,
+          ...v
+        });
   }
 
   /**

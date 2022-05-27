@@ -21,8 +21,9 @@
 
        <div style="margin-top: 15px;">
               <div class="ability flexrow flex-group-center">
-                     <label for="data.skills.attack.value" class="resource-label rollable flexlarge align-left"
-                            data-roll="d20+@skills.attack.value+@skills.attack.mod+@skills.attack.temp"
+                     <label for="data.skills.attack.value"
+                            class="resource-label clickable rollable-skills flexlarge align-left"
+                            data-skill="attack"
                             data-label="attack">{{localize
                             "nhb.action.attack"}}</label>
                      <p>{{data.skills.attack.total}}</p>
@@ -30,12 +31,13 @@
                             data-dtype="Number" />
                      <input type="text" name="data.skills.attack.temp" value="{{data.skills.attack.temp}}"
                             data-dtype="Number" />
-                     <span class="ability-mod rollable" data-label="attack">{{numberFormat data.skills.attack.mod
+                     <span class="ability-mod" data-label="attack">{{numberFormat data.skills.attack.mod
                             decimals=0 sign=true}}</span>
               </div>
               <div class="ability flexrow flex-group-center">
-                     <label for="data.skills.parade.value" class="resource-label rollable flexlarge align-left"
-                            data-roll="d20+@skills.parade.value+@skills.parade.mod+@skills.parade.temp"
+                     <label for="data.skills.parade.value"
+                            class="resource-label clickable rollable-skills flexlarge align-left"
+                            data-skill="parade"
                             data-label="parade">{{localize
                             "nhb.action.parade"}}</label>
                      <p>{{data.skills.parade.total}}</p>
@@ -43,12 +45,13 @@
                             data-dtype="Number" />
                      <input type="text" name="data.skills.parade.temp" value="{{data.skills.parade.temp}}"
                             data-dtype="Number" />
-                     <span class="ability-mod rollable" data-label="parade">{{numberFormat data.skills.parade.mod
+                     <span class="ability-mod" data-label="parade">{{numberFormat data.skills.parade.mod
                             decimals=0 sign=true}}</span>
               </div>
               <div class="ability flexrow flex-group-center">
-                     <label for="data.skills.throw.value" class="resource-label rollable flexlarge align-left"
-                            data-roll="d20+@skills.throw.value+@skills.throw.mod+@skills.throw.temp"
+                     <label for="data.skills.throw.value"
+                            class="resource-label clickable rollable-skills flexlarge align-left"
+                            data-skill="throw"
                             data-label="throw">{{localize
                             "nhb.action.throw"}}</label>
                      <p>{{data.skills.throw.total}}</p>
@@ -56,12 +59,13 @@
                             data-dtype="Number" disabled />
                      <input type="text" name="data.skills.throw.temp" value="{{data.skills.throw.temp}}"
                             data-dtype="Number" />
-                     <span class="ability-mod rollable" data-label="throw">{{numberFormat data.skills.throw.mod
+                     <span class="ability-mod" data-label="throw">{{numberFormat data.skills.throw.mod
                             decimals=0 sign=true}}</span>
               </div>
               <div class="ability flexrow flex-group-center">
-                     <label for="data.skills.dodge.value" class="resource-label rollable flexlarge align-left"
-                            data-roll="d20+@skills.dodge.value+@skills.dodge.mod+@skills.dodge.temp"
+                     <label for="data.skills.dodge.value"
+                            class="resource-label clickable rollable-skills flexlarge align-left"
+                            data-skill="dodge"
                             data-label="dodge">{{localize
                             "nhb.action.dodge"}}</label>
                      <p>{{data.skills.dodge.total}}</p>
@@ -69,12 +73,13 @@
                             data-dtype="Number" disabled />
                      <input type="text" name="data.skills.dodge.temp" value="{{data.skills.dodge.temp}}"
                             data-dtype="Number" />
-                     <span class="ability-mod rollable" data-label="dodge">{{numberFormat data.skills.dodge.mod
+                     <span class="ability-mod" data-label="dodge">{{numberFormat data.skills.dodge.mod
                             decimals=0 sign=true}}</span>
               </div>
               <div class="ability flexrow flex-group-center">
-                     <label for="data.skills.magic.physical.value" class="resource-label rollable flexlarge align-left"
-                            data-roll="d20+@skills.dodge.value+@skills.dodge.mod+@skills.dodge.temp"
+                     <label for="data.skills.magic.physical.value"
+                            class="resource-label clickable rollable-skills flexlarge align-left"
+                            data-skill="magic.physical"
                             data-label="magic.physical">{{localize
                             "nhb.magic.physical"}}</label>
                      <p>{{data.skills.magic.physical.total}}</p>
@@ -82,12 +87,13 @@
                             value="{{data.skills.magic.physical.value}}" data-dtype="Number" disabled />
                      <input type="text" name="data.skills.magic.physical.temp"
                             value="{{data.skills.magic.physical.temp}}" data-dtype="Number" />
-                     <span class="ability-mod rollable" data-label="magic.physical">{{numberFormat
+                     <span class="ability-mod" data-label="magic.physical">{{numberFormat
                             data.skills.magic.physical.mod decimals=0 sign=true}}</span>
               </div>
               <div class="ability flexrow flex-group-center">
-                     <label for="data.skills.magic.psychic.value" class="resource-label rollable flexlarge align-left"
-                            data-roll="d20+@skills.dodge.value+@skills.dodge.mod+@skills.dodge.temp"
+                     <label for="data.skills.magic.psychic.value"
+                            class="resource-label clickable rollable-skills flexlarge align-left"
+                            data-skill="magic.psychic"
                             data-label="magic.psychic">{{localize
                             "nhb.magic.psychic"}}</label>
                      <p>{{data.skills.magic.psychic.total}}</p>
@@ -95,7 +101,7 @@
                             value="{{data.skills.magic.psychic.value}}" data-dtype="Number" disabled />
                      <input type="text" name="data.skills.magic.psychic.temp" value="{{data.skills.magic.psychic.temp}}"
                             data-dtype="Number" />
-                     <span class="ability-mod rollable" data-label="magic.psychic">{{numberFormat data.skills.dodge.mod
+                     <span class="ability-mod" data-label="magic.psychic">{{numberFormat data.skills.dodge.mod
                             decimals=0 sign=true}}</span>
               </div>
        </div>

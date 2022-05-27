@@ -19,7 +19,11 @@
       "attack": "Attaque",
       "parade": "Parade",
       "throw": "Jet",
-      "dodge": "Esquive"
+      "dodge": "Esquive",
+      "magic": {
+        "physical": "Magie Physique",
+        "psychic": "Magie Psychique"
+      }
     },
     "actor": {
       "sheet": {

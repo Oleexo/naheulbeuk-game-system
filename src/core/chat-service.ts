@@ -7,6 +7,7 @@ class ChatService {
   };
 
   async sendRoll(type: RollType, roll: Roll, context: any) {
+    console.log(context);
     await roll.evaluate();
     const html = await renderTemplate(this.templates[type], {
       roll: {

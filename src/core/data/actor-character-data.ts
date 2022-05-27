@@ -62,6 +62,7 @@ export function computeSkillsTotalValues(skills: Skills) {
 export function prepareCharacterData(actorData: ActorWrapper) {
     if (actorData.type !== 'character') return;
 
+    console.log(actorData.data);
     const data = actorData.data;
 
     computeStatsTotalValues(data.stats);
@@ -95,6 +96,7 @@ Il n'y a pas de malus pour intelligence faible, car un score faible ne permet pa
 puis, le sort est déjà doué d'une vie propre..
      */
 
+    data.skills.dodge.value = data.stats.dexterity.total;
     computeSkillsTotalValues(data.skills);
 }
 
